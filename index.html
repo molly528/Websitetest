@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molly Schwartz Therapy — Atlanta, GA</title>
+  <meta name="description" content="Individual therapy in Atlanta, GA specializing in relationships, intimacy, identity, self-esteem, anxiety, and LGBTQIA+ issues. Molly Schwartz, MA, NCC, LPC.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Inline SVG favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%233A2A3F'/><circle cx='16' cy='16' r='8' fill='%23FF9DC6'/></svg>">
+
+  <style>
+    /* ─── PALETTE ─────────────────────────────────────────── */
+    :root {
+      --cream:      #FAF7F2;
+      --plum:       #3A2A3F;
+      --bubblegum:  #FF9DC6;
+      --periwinkle: #80B0E8;
+      --teal:       #008471;
+      --lavender:   #D1CAEA;
+      --sun:        #F4D242;
+
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body:    'Hanken Grotesk', 'Helvetica Neue', sans-serif;
+
+      /* Fluid type */
+      --text-xs:   clamp(0.70rem, 0.66rem + 0.18vw, 0.80rem);
+      --text-sm:   clamp(0.83rem, 0.78rem + 0.29vw, 1.00rem);
+      --text-base: clamp(1.00rem, 0.91rem + 0.43vw, 1.25rem);
+      --text-lg:   clamp(1.20rem, 1.07rem + 0.63vw, 1.56rem);
+      --text-xl:   clamp(1.44rem, 1.26rem + 0.89vw, 1.95rem);
+      --text-2xl:  clamp(1.73rem, 1.48rem + 1.24vw, 2.44rem);
+      --text-3xl:  clamp(2.07rem, 1.73rem + 1.70vw, 3.05rem);
+      --text-4xl:  clamp(2.49rem, 2.03rem + 2.31vw, 3.82rem);
+      --text-5xl:  clamp(3.18rem, 2.50rem + 3.50vw, 5.20rem);
+
+      /* Spacing */
+      --space-xs:  clamp(0.75rem, 0.68rem + 0.33vw, 0.94rem);
+      --space-s:   clamp(1.00rem, 0.91rem + 0.43vw, 1.25rem);
+      --space-m:   clamp(1.50rem, 1.37rem + 0.65vw, 1.88rem);
+      --space-l:   clamp(2.00rem, 1.83rem + 0.87vw, 2.50rem);
+      --space-xl:  clamp(3.00rem, 2.74rem + 1.30vw, 3.75rem);
+      --space-2xl: clamp(4.00rem, 3.65rem + 1.74vw, 5.00rem);
+      --space-3xl: clamp(6.00rem, 5.48rem + 2.61vw, 7.50rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--plum);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--bubblegum);
+      color: var(--plum);
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 200;
+      padding: var(--space-s) var(--space-l);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(250, 247, 242, 0.82);
+      border-bottom: 1px solid rgba(58, 42, 63, 0.07);
+      transition: background 0.3s ease;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      font-style: italic;
+      color: var(--plum);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-l);
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--plum);
+      text-decoration: none;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background: var(--bubblegum);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.32s ease;
+    }
+
+    @media (hover: hover) {
+      .nav-links a:not(.nav-cta):hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+
+    .nav-cta {
+      background: var(--plum) !important;
+      color: var(--cream) !important;
+      padding: 0.55em 1.4em !important;
+      border-radius: 3em;
+      font-weight: 500 !important;
+      transition: background 0.25s ease, transform 0.2s ease !important;
+      display: inline-block;
+    }
+
+    .nav-cta::after { display: none !important; }
+
+    @media (hover: hover) {
+      .nav-cta:hover {
+        background: var(--teal) !important;
+        transform: translateY(-1px);
+      }
+    }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    #home {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      padding-top: 4.5rem;
+    }
+
+    .hero-content {
+      padding: var(--space-3xl) var(--space-xl) var(--space-3xl) var(--space-2xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-eyebrow {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-m);
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 2.5em;
+      height: 1.5px;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--plum);
+      text-wrap: balance;
+      margin-bottom: var(--space-l);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .hero-sub {
+      font-size: var(--text-lg);
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--plum);
+      opacity: 0.78;
+      max-width: 36rem;
+      margin-bottom: var(--space-xl);
+      text-wrap: pretty;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-m);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--plum);
+      color: var(--cream);
+      padding: 0.9em 2.2em;
+      border-radius: 3em;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: var(--text-base);
+      letter-spacing: 0.01em;
+      display: inline-block;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    @media (hover: hover) {
+      .btn-primary:hover {
+        background: var(--teal);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 132, 113, 0.28);
+      }
+    }
+
+    .btn-ghost {
+      color: var(--plum);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: var(--text-base);
+      border-bottom: 2px solid var(--bubblegum);
+      padding-bottom: 1px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    @media (hover: hover) {
+      .btn-ghost:hover {
+        color: var(--teal);
+        border-color: var(--teal);
+      }
+    }
+
+    .hero-visual {
+      position: relative;
+      background: var(--lavender);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 60vh;
+    }
+
+    .hero-blob {
+      position: absolute;
+      width: 75%;
+      height: 65%;
+      background: var(--bubblegum);
+      opacity: 0.55;
+      border-radius: 60% 40% 50% 50% / 55% 45% 55% 45%;
+      animation: blobmorph 10s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes blobmorph {
+      0%, 100% { border-radius: 60% 40% 50% 50% / 55% 45% 55% 45%; transform: translate(-5%, 0); }
+      33%       { border-radius: 40% 60% 55% 45% / 45% 55% 45% 55%; transform: translate(5%, -5%); }
+      66%       { border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%; transform: translate(0, 5%); }
+    }
+
+    .hero-sun {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: clamp(60px, 10vw, 100px);
+      height: clamp(60px, 10vw, 100px);
+      background: var(--sun);
+      border-radius: 50%;
+    }
+
+    .hero-visual-text {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--plum);
+      text-align: center;
+      line-height: 1.15;
+      padding: var(--space-l);
+      text-wrap: balance;
+    }
+
+    /* ─── ABOUT ───────────────────────────────────────────── */
+    #about {
+      background: var(--plum);
+      color: var(--cream);
+      padding: var(--space-3xl) var(--space-2xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      margin-bottom: var(--space-m);
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 2.5em;
+      height: 1.5px;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+
+    .section-label--pink  { color: var(--bubblegum); }
+    .section-label--teal  { color: var(--teal); }
+    .section-label--sun   { color: var(--sun); }
+
+    .about-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+      margin-bottom: var(--space-l);
+    }
+
+    .about-title em {
+      font-style: italic;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1.5px var(--bubblegum);
+    }
+
+    .about-body {
+      font-size: var(--text-lg);
+      font-weight: 300;
+      line-height: 1.72;
+      opacity: 0.82;
+    }
+
+    .about-body p + p { margin-top: var(--space-m); }
+    .about-body em { font-style: italic; opacity: 1; }
+
+    .about-credentials {
+      margin-top: var(--space-xl);
+      padding: var(--space-l);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .about-credentials strong {
+      display: block;
+      font-size: var(--text-base);
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+      color: var(--bubblegum);
+    }
+
+    .about-credentials p {
+      font-size: var(--text-sm);
+      opacity: 0.6;
+      line-height: 1.8;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: var(--lavender);
+      border-radius: clamp(1rem, 2vw, 1.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 40% 60%, var(--periwinkle) 0%, transparent 65%);
+      opacity: 0.5;
+    }
+
+    .about-photo span {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-base);
+      color: var(--plum);
+      opacity: 0.5;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -1.25rem;
+      right: -1rem;
+      background: var(--sun);
+      color: var(--plum);
+      padding: var(--space-m) var(--space-l);
+      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      line-height: 1.45;
+      text-align: center;
+      box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    /* ─── SERVICES ────────────────────────────────────────── */
+    #services {
+      padding: var(--space-3xl) var(--space-2xl);
+      background: var(--cream);
+    }
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: var(--space-2xl);
+      gap: var(--space-l);
+    }
+
+    .services-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+    }
+
+    .services-sub {
+      max-width: 22rem;
+      font-size: var(--text-base);
+      font-weight: 300;
+      line-height: 1.65;
+      opacity: 0.65;
+      flex-shrink: 0;
+      text-wrap: pretty;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: var(--space-m);
+    }
+
+    /* Last two cards span wider */
+    .service-card:nth-child(4) { grid-column: span 1; }
+    .service-card:nth-child(5) { grid-column: span 2; }
+
+    .service-card {
+      padding: var(--space-xl) var(--space-l);
+      border-radius: clamp(1rem, 2vw, 1.5rem);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+      min-height: 260px;
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                  box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (hover: hover) {
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1.5rem 3.5rem rgba(58, 42, 63, 0.12);
+      }
+    }
+
+    .service-card:nth-child(1) { background: var(--bubblegum); }
+    .service-card:nth-child(2) { background: var(--periwinkle); }
+    .service-card:nth-child(3) { background: var(--teal); color: var(--cream); }
+    .service-card:nth-child(4) { background: var(--lavender); }
+    .service-card:nth-child(5) { background: var(--sun); }
+
+    .service-num {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 800;
+      opacity: 0.2;
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .service-name {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .service-desc {
+      font-size: var(--text-sm);
+      line-height: 1.65;
+      opacity: 0.78;
+      margin-top: auto;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    /* ─── MANIFESTO ───────────────────────────────────────── */
+    #approach {
+      background: var(--bubblegum);
+      padding: var(--space-3xl) var(--space-2xl);
+    }
+
+    .manifesto {
+      max-width: 50rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .manifesto-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75em;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xl);
+    }
+
+    .manifesto-label::before,
+    .manifesto-label::after {
+      content: '';
+      display: inline-block;
+      width: 2.5em;
+      height: 1.5px;
+      background: var(--teal);
+    }
+
+    .manifesto-quote {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      color: var(--plum);
+      text-wrap: balance;
+      margin-bottom: var(--space-xl);
+    }
+
+    .manifesto-body {
+      font-size: var(--text-lg);
+      font-weight: 300;
+      line-height: 1.72;
+      opacity: 0.78;
+      max-width: 42rem;
+      margin: 0 auto;
+      text-wrap: pretty;
+    }
+
+    /* ─── FEES ────────────────────────────────────────────── */
+    #fees {
+      background: var(--lavender);
+      padding: var(--space-3xl) var(--space-2xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    .fees-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+      margin-bottom: var(--space-l);
+    }
+
+    .fees-body {
+      font-size: var(--text-lg);
+      font-weight: 300;
+      line-height: 1.72;
+      opacity: 0.82;
+      text-wrap: pretty;
+    }
+
+    .fees-items {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-s);
+    }
+
+    .fees-item {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(58, 42, 63, 0.07);
+      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+      padding: var(--space-l);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-m);
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    @media (hover: hover) {
+      .fees-item:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateX(4px);
+      }
+    }
+
+    .fees-item-label {
+      font-weight: 500;
+      font-size: var(--text-base);
+    }
+
+    .fees-item-value {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--teal);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ─── CONTACT ─────────────────────────────────────────── */
+    #contact {
+      background: var(--plum);
+      color: var(--cream);
+      padding: var(--space-3xl) var(--space-2xl);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .contact-inner {
+      max-width: 38rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      font-weight: 800;
+      font-style: italic;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      margin-bottom: var(--space-m);
+      margin-top: var(--space-m);
+    }
+
+    .contact-sub {
+      font-size: var(--text-lg);
+      font-weight: 300;
+      opacity: 0.72;
+      line-height: 1.65;
+      margin-bottom: var(--space-2xl);
+      text-wrap: pretty;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-m);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45em;
+    }
+
+    .form-group label {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      opacity: 0.65;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 0.6em;
+      padding: 0.85em 1em;
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      width: 100%;
+      transition: border-color 0.22s ease, background 0.22s ease;
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(250, 247, 242, 0.3); }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--bubblegum);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--plum); color: var(--cream); }
+
+    .btn-submit {
+      background: var(--bubblegum);
+      color: var(--plum);
+      border: none;
+      padding: 1em 2.5em;
+      border-radius: 3em;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: var(--space-xs);
+      letter-spacing: 0.01em;
+    }
+
+    @media (hover: hover) {
+      .btn-submit:hover {
+        background: var(--sun);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(244, 210, 66, 0.28);
+      }
+    }
+
+    .btn-submit:disabled {
+      cursor: default;
+      background: var(--teal);
+      color: var(--cream);
+    }
+
+    .contact-details {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid rgba(255, 255, 255, 0.09);
+      display: flex;
+      gap: var(--space-l);
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: var(--text-sm);
+      opacity: 0.55;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--plum);
+      color: var(--cream);
+      padding: var(--space-l) var(--space-2xl);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      font-size: var(--text-sm);
+      opacity: 0.55;
+      flex-wrap: wrap;
+      gap: var(--space-m);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── SCROLL REVEAL ───────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.25rem);
+      transition: opacity 0.85s cubic-bezier(0.23, 1, 0.32, 1),
+                  transform 0.85s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-d1 { transition-delay: 0.08s; }
+    .reveal-d2 { transition-delay: 0.16s; }
+    .reveal-d3 { transition-delay: 0.24s; }
+    .reveal-d4 { transition-delay: 0.32s; }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 960px) {
+      #home { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 45vh; }
+      #about { grid-template-columns: 1fr; }
+      .about-photo { max-width: 360px; margin: 0 auto; }
+      .services-header { flex-direction: column; align-items: flex-start; }
+      #fees { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .service-card:nth-child(4),
+      .service-card:nth-child(5) { grid-column: span 1; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { gap: var(--space-m); }
+    }
+
+    @media (max-width: 520px) {
+      .nav-links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ────────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <a href="#home" class="nav-logo">Molly Schwartz</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────────── -->
+  <section id="home" aria-label="Hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Therapy in Atlanta, GA</p>
+      <h1 class="hero-title">
+        Let's talk about<br>
+        the stuff you<br>
+        <em>actually</em> think about.
+      </h1>
+      <p class="hero-sub">
+        Individual therapy for relationships, identity, intimacy, and all the messy, beautiful parts of being human. No judgment — just real conversation.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a Free Consult</a>
+        <a href="#about" class="btn-ghost">About Molly</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-blob"></div>
+      <div class="hero-sun"></div>
+      <p class="hero-visual-text">You're not<br>too much.</p>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────────────────── -->
+  <section id="about" aria-label="About Molly">
+    <div>
+      <p class="section-label section-label--pink">About</p>
+      <h2 class="about-title">
+        Therapy that<br>
+        meets you <em>here.</em>
+      </h2>
+      <div class="about-body">
+        <p>
+          Hi, I'm Molly. I'm a licensed therapist in Atlanta, and I specialize in the kinds of conversations that feel too complicated — or too vulnerable — to have anywhere else.
+        </p>
+        <p>
+          Whether you're untangling your sense of self, figuring out who you are in relationships, exploring your identity, or just trying to feel less anxious about being alive — you don't have to do it alone.
+        </p>
+        <p>
+          My approach is warm, direct, and genuinely collaborative. I'm not here to hand you a worksheet. I'm here to actually <em>think</em> with you.
+        </p>
+      </div>
+      <div class="about-credentials">
+        <strong>Molly Schwartz, MA, NCC, LPC</strong>
+        <p>Licensed Professional Counselor</p>
+        <p>National Certified Counselor</p>
+        <p>Atlanta, Georgia</p>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-photo">
+        <span>your photo here</span>
+      </div>
+      <div class="about-badge">
+        LGBTQIA+<br>Affirming<br>Practice ✦
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ───────────────────────────────────────────── -->
+  <section id="services" aria-label="Services">
+    <div class="services-header">
+      <div>
+        <p class="section-label section-label--teal reveal">Specialties</p>
+        <h2 class="services-title reveal reveal-d1">What we can<br>work on together.</h2>
+      </div>
+      <p class="services-sub reveal reveal-d2">
+        Each of these areas overlaps — because you're a whole person, not a diagnosis. We'll figure out what fits.
+      </p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <span class="service-num" aria-hidden="true">01</span>
+        <h3 class="service-name">Relationship &amp; Intimacy Dynamics</h3>
+        <p class="service-desc">Patterns in how we connect — and disconnect — with the people we love. Attachment, conflict, communication, desire.</p>
+      </article>
+      <article class="service-card reveal reveal-d1">
+        <span class="service-num" aria-hidden="true">02</span>
+        <h3 class="service-name">Sexuality &amp; Identity Exploration</h3>
+        <p class="service-desc">A space to question, discover, and name your experience — on your own terms, without a timeline.</p>
+      </article>
+      <article class="service-card reveal reveal-d2">
+        <span class="service-num" aria-hidden="true">03</span>
+        <h3 class="service-name">Self-Esteem &amp; Self-Worth</h3>
+        <p class="service-desc">The inner critic is loud. We'll work on turning down the volume and building a relationship with yourself that actually feels good.</p>
+      </article>
+      <article class="service-card reveal reveal-d1">
+        <span class="service-num" aria-hidden="true">04</span>
+        <h3 class="service-name">Anxiety</h3>
+        <p class="service-desc">Whether it's constant worry, social anxiety, or the unnamed dread that shows up uninvited — you don't have to white-knuckle it alone.</p>
+      </article>
+      <article class="service-card reveal reveal-d2">
+        <span class="service-num" aria-hidden="true">05</span>
+        <h3 class="service-name">LGBTQIA+ Issues</h3>
+        <p class="service-desc">Affirming, knowledgeable support for queer and trans folks navigating identity, coming out, family, community, and everything in between.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── APPROACH ───────────────────────────────────────────── -->
+  <section id="approach" aria-label="My approach">
+    <div class="manifesto">
+      <p class="manifesto-label reveal">My Approach</p>
+      <blockquote class="manifesto-quote reveal reveal-d1">
+        "Therapy works best when it feels like a real conversation — not a performance."
+      </blockquote>
+      <p class="manifesto-body reveal reveal-d2">
+        I draw from relational, psychodynamic, and humanistic frameworks — which is a fancy way of saying: I pay attention to patterns, I care about your history, and I believe you already hold most of the answers. My job is to help you find them.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FEES ───────────────────────────────────────────────── -->
+  <section id="fees" aria-label="Fees and insurance">
+    <div>
+      <p class="section-label section-label--teal reveal">Investment</p>
+      <h2 class="fees-title reveal reveal-d1">
+        Honest about<br>what it costs.
+      </h2>
+      <p class="fees-body reveal reveal-d2">
+        I'm a private-pay practice — I don't bill insurance directly, but I provide a superbill so you can submit for potential out-of-network reimbursement. A sliding scale is available. Money shouldn't be the reason you don't get support. Let's talk.
+      </p>
+    </div>
+    <div class="fees-items">
+      <div class="fees-item reveal">
+        <span class="fees-item-label">Free Consultation (15 min)</span>
+        <span class="fees-item-value">Free</span>
+      </div>
+      <div class="fees-item reveal reveal-d1">
+        <span class="fees-item-label">Individual Session (50 min)</span>
+        <span class="fees-item-value">Inquire</span>
+      </div>
+      <div class="fees-item reveal reveal-d2">
+        <span class="fees-item-label">Sliding Scale Available</span>
+        <span class="fees-item-value">Yes</span>
+      </div>
+      <div class="fees-item reveal reveal-d3">
+        <span class="fees-item-label">Superbill for Insurance</span>
+        <span class="fees-item-value">Provided</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────────── -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-inner">
+      <p class="section-label section-label--pink" style="justify-content:center;">Let's Connect</p>
+      <h2 class="contact-title">Ready when<br>you are.</h2>
+      <p class="contact-sub">
+        Fill this out and I'll get back to you within one business day. The first consultation is free — no commitment, just a conversation.
+      </p>
+      <form class="contact-form" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="First name is fine" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="interest">What brings you here? (optional)</label>
+          <select id="interest" name="interest">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="relationships">Relationship &amp; Intimacy</option>
+            <option value="identity">Sexuality &amp; Identity</option>
+            <option value="self-esteem">Self-Esteem / Self-Worth</option>
+            <option value="anxiety">Anxiety</option>
+            <option value="lgbtqia">LGBTQIA+ Issues</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else you'd like to share? (optional)</label>
+          <textarea id="message" name="message" placeholder="No pressure — even a sentence is enough."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <span>Atlanta, Georgia</span>
+        <span>molly@mollyschwartztherapy.com</span>
+        <span>Telehealth available throughout GA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <span>© 2026 Molly Schwartz Therapy</span>
+    <span>Molly Schwartz, MA, NCC, LPC — Atlanta, GA</span>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Contact form (placeholder handler)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'Message sent ✦';
+      btn.disabled = true;
+    }
+  </script>
+
+</body>
+</html>
