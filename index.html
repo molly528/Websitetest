@@ -15,479 +15,413 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["MedicalBusiness","ProfessionalService"],
-  "name": "Reflecting Therapy — Molly Schwartz, MA, NCC",
-  "description": "Affirming individual and couples therapy in Atlanta for eldest daughters, LGBTQIA+, nonmonogamous, and kink-aware clients.",
-  "areaServed": [{"@type":"City","name":"Atlanta"},{"@type":"State","name":"Georgia"}],
-  "address": {"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},
-  "url": "https://mollyschwartztherapy.com",
-  "email": "molly@mollyschwartztherapy.com"
-}
+{"@context":"https://schema.org","@type":["MedicalBusiness","ProfessionalService"],"name":"Reflecting Therapy — Molly Schwartz, MA, NCC","description":"Affirming individual and couples therapy in Atlanta.","areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"State","name":"Georgia"}],"address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},"url":"https://mollyschwartztherapy.com","email":"molly@mollyschwartztherapy.com"}
 </script>
 
 <style>
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  --cream:      #FAF7F2;
-  --paper:      #FFFDF9;
-  --ink:        #3A2A3F;
-  --ink-soft:   #6A5A6E;
-  --coral:      #FF9DC6;
-  --coral-tint: #FFE8F3;
-  --teal:       #008471;
-  --teal-tint:  #DFF2EB;
-  --sun:        #F4D242;
-  --sun-tint:   #FBF3CC;
-  --lilac:      #80B0E8;
-  --lilac-tint: #E4EEFA;
-  --lavender:   #D1CAEA;
-  --lav-tint:   #F0EDF8;
-
-  --font-h: 'Fraunces', Georgia, serif;
-  --font-b: 'Nunito', system-ui, sans-serif;
-  --maxw: 1140px;
-  --r: 20px;
+  --cream:    #FAF7F2;
+  --paper:    #FFFDF9;
+  --ink:      #3A2A3F;
+  --ink-soft: #6A5A6E;
+  --coral:    #FF9DC6;
+  --coral-d:  #e8608e;
+  --teal:     #008471;
+  --teal-t:   #DFF2EB;
+  --sun:      #F4D242;
+  --sun-t:    #FBF3CC;
+  --lilac:    #80B0E8;
+  --lilac-t:  #E4EEFA;
+  --lav:      #D1CAEA;
+  --lav-t:    #F0EDF8;
+  --font-h:   'Fraunces', Georgia, serif;
+  --font-b:   'Nunito', system-ui, sans-serif;
+  --maxw:     1120px;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-@media (prefers-reduced-motion: reduce) {
-  .disco, .marquee-track { animation: none !important; }
-  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media(prefers-reduced-motion:reduce){
+  .starburst,.marquee-track,.disco-ball-svg{animation:none!important}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
 }
 
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--font-b);
-  font-size: 18px;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+body{background:var(--cream);color:var(--ink);font-family:var(--font-b);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+h1,h2,h3{font-family:var(--font-h);font-weight:600;line-height:1.0;letter-spacing:-.03em}
+h1{font-size:clamp(3rem,8vw,6.4rem)}
+h2{font-size:clamp(2rem,4.5vw,3.4rem)}
+h3{font-size:1.28rem;line-height:1.2}
+p{margin-bottom:1em}
+a{color:inherit}
+section{scroll-margin-top:68px}
+::selection{background:var(--coral);color:var(--ink)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+.eyebrow{
+  font-family:var(--font-b);font-weight:800;text-transform:uppercase;
+  letter-spacing:.15em;font-size:.72rem;color:var(--coral);
+  margin-bottom:.75rem;display:block
 }
 
-h1, h2, h3 { font-family: var(--font-h); font-weight: 700; line-height: 1.07; letter-spacing: -.025em; }
-h1 { font-size: clamp(2.8rem, 7.5vw, 5.8rem); font-weight: 600; }
-h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); }
-h3 { font-size: 1.3rem; }
-p  { margin-bottom: 1em; }
-a  { color: inherit; }
-section { scroll-margin-top: 72px; }
-
-::selection { background: var(--coral); color: var(--ink); }
-
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
-
-.eyebrow {
-  font-family: var(--font-b); font-weight: 800;
-  text-transform: uppercase; letter-spacing: .14em; font-size: .75rem;
-  color: var(--coral); margin-bottom: .8rem; display: block;
+/* ── 3D BUTTONS (FUEGO physical press) ───────────────────── */
+.btn{
+  display:inline-block;font-family:var(--font-b);font-weight:800;
+  font-size:1rem;text-decoration:none;padding:14px 28px;
+  border-radius:999px;border:2px solid var(--ink);
+  background:var(--coral);color:var(--ink);cursor:pointer;
+  box-shadow:0 5px 0 var(--ink);
+  transition:transform .08s ease,box-shadow .08s ease,background .15s ease;
 }
-
-/* ── BUTTONS ──────────────────────────────────────────────── */
-.btn {
-  display: inline-block; font-family: var(--font-b); font-weight: 800;
-  font-size: 1rem; text-decoration: none; padding: 14px 28px;
-  border-radius: 999px; border: 2px solid var(--ink);
-  background: var(--coral); color: var(--ink); cursor: pointer;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-}
-.btn:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 4px 5px 0 var(--ink); }
-.btn--ghost { background: transparent; }
-.btn--ghost:hover { background: var(--sun); }
-.btn:focus-visible, a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 8px;
-}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--ink)}
+.btn--ghost{background:var(--cream)}
+.btn--ghost:hover{background:var(--sun)}
+.btn--light{background:var(--cream);border-color:var(--cream);color:var(--ink);box-shadow:0 5px 0 rgba(255,255,255,.4)}
+.btn--light:hover{transform:translateY(-2px);box-shadow:0 7px 0 rgba(255,255,255,.4)}
+.btn--light:active{transform:translateY(5px);box-shadow:0 0 0 rgba(255,255,255,.4)}
+.btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
 
 /* ── NAV ─────────────────────────────────────────────────── */
-header.nav {
-  position: sticky; top: 0; z-index: 200;
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  background: rgba(250,247,242,.9);
-  border-bottom: 1.5px solid transparent;
-  transition: border-color .2s;
+header.nav{
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(250,247,242,.9);
+  border-bottom:1.5px solid transparent;transition:border-color .2s
 }
-header.nav.scrolled { border-color: rgba(58,42,63,.12); }
-.nav-in {
-  display: flex; align-items: center; justify-content: space-between;
-  max-width: var(--maxw); margin: 0 auto; padding: 11px 28px;
+header.nav.scrolled{border-color:rgba(58,42,63,.12)}
+.nav-in{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:var(--maxw);margin:0 auto;padding:11px 28px
 }
-.brand {
-  font-family: var(--font-h); font-weight: 700; font-size: 1.25rem;
-  text-decoration: none; color: var(--ink);
-  display: flex; align-items: center; gap: 10px;
+.brand{
+  font-family:var(--font-h);font-weight:700;font-size:1.2rem;
+  text-decoration:none;color:var(--ink);
+  display:flex;align-items:center;gap:9px
 }
-.brand img { height: 40px; width: auto; display: block; }
-.brand-text { font-style: italic; }
-.links { display: flex; align-items: center; gap: 22px; }
-.links a {
-  font-family: var(--font-b); font-weight: 700; font-size: .92rem;
-  text-decoration: none; color: var(--ink); opacity: .8;
-  transition: opacity .15s, color .15s;
+.brand img{height:38px;width:auto;display:block}
+.brand-text{font-style:italic}
+.links{display:flex;align-items:center;gap:20px}
+.links a{
+  font-family:var(--font-b);font-weight:700;font-size:.9rem;
+  text-decoration:none;color:var(--ink);opacity:.8;
+  transition:opacity .15s,color .15s
 }
-.links a:hover { opacity: 1; color: var(--teal); }
-.nav-toggle {
-  display: none; background: none; border: 2px solid var(--ink);
-  border-radius: 10px; padding: 7px 13px; font-size: .9rem;
-  cursor: pointer; font-family: var(--font-b); font-weight: 800;
+.links a:hover{opacity:1;color:var(--teal)}
+.nav-toggle{
+  display:none;background:none;border:2px solid var(--ink);
+  border-radius:10px;padding:6px 12px;font-size:.88rem;
+  cursor:pointer;font-family:var(--font-b);font-weight:800
 }
 
-/* ── DISCO BALL ──────────────────────────────────────────── */
-.disco {
-  display: block; width: 54px; height: 54px; border-radius: 50%;
-  background: conic-gradient(
-    var(--sun) 0deg 45deg, var(--coral) 45deg 90deg,
-    var(--lilac) 90deg 135deg, var(--teal-tint) 135deg 180deg,
-    var(--lavender) 180deg 225deg, var(--sun) 225deg 270deg,
-    var(--coral-tint) 270deg 315deg, var(--sun) 315deg 360deg
-  );
-  box-shadow: 0 0 0 2.5px var(--ink);
-  animation: discoSpin 6s linear infinite;
-  flex-shrink: 0;
+/* ── STARBURST (spins in sticker) ────────────────────────── */
+.starburst{
+  width:34px;height:34px;flex-shrink:0;
+  background:var(--sun);border:2px solid var(--ink);border-radius:2px;
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  animation:starSpin 9s linear infinite;display:block
 }
-@keyframes discoSpin { to { transform: rotate(360deg); } }
+@keyframes starSpin{to{transform:rotate(360deg)}}
 
 /* ── HERO ────────────────────────────────────────────────── */
-#hero {
-  min-height: 100svh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  overflow: hidden;
-  background: var(--cream);
+#hero{
+  display:grid;grid-template-columns:55fr 45fr;
+  min-height:100svh;
 }
 
-.hero-left {
-  padding: clamp(5rem, 11vh, 8rem) clamp(1.5rem, 4vw, 3.5rem) clamp(4rem, 8vh, 6rem) clamp(1.5rem, 5vw, 4.5rem);
-  display: flex; flex-direction: column; justify-content: center;
-  position: relative; z-index: 2;
+.hero-left{
+  padding:clamp(4.5rem,9vh,7rem) clamp(1.5rem,3.5vw,3rem) clamp(3.5rem,7vh,5rem) clamp(1.5rem,5vw,4.5rem);
+  display:flex;flex-direction:column;justify-content:center;
 }
 
-.sticker {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--font-b); font-weight: 800; font-size: .82rem;
-  background: var(--paper); border: 2px solid var(--ink);
-  border-radius: 999px; padding: 7px 16px;
-  transform: rotate(-2.5deg); align-self: flex-start;
-  box-shadow: 3px 3px 0 var(--ink); margin-bottom: 2rem;
+.sticker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-b);font-weight:800;font-size:.8rem;
+  background:var(--paper);border:2px solid var(--ink);
+  border-radius:999px;padding:7px 16px;
+  transform:rotate(-2deg);align-self:flex-start;
+  box-shadow:3px 3px 0 var(--ink);margin-bottom:1.8rem
 }
 
-.hero-h1 {
-  font-size: clamp(2.8rem, 7.5vw, 5.8rem);
-  font-weight: 600;
-  line-height: 1.0;
-  letter-spacing: -.03em;
-  margin-bottom: .7em;
+.hero-h1{
+  font-size:clamp(3rem,8vw,6.4rem);
+  line-height:.95;letter-spacing:-.035em;
+  margin-bottom:.6em
 }
-.hero-h1 em {
-  font-style: italic;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px var(--ink);
-  display: block;
+.hero-h1 em{
+  font-style:italic;display:block;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.5px var(--ink)
+}
+.hero-h1 em.coral-stroke{-webkit-text-stroke-color:var(--coral-d)}
+
+.hero-lede{
+  font-size:clamp(.95rem,1.7vw,1.15rem);
+  max-width:38ch;color:var(--ink-soft);font-weight:600;
+  margin-bottom:1.8em;line-height:1.65
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* hero right: dark bg with disco ball */
+.hero-right{
+  background:var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1.4rem;padding:3rem 2rem;position:relative;overflow:hidden
+}
+/* subtle scattered light dots */
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 40%,rgba(255,157,198,.15) 0%,transparent 50%),
+             radial-gradient(circle at 75% 65%,rgba(244,210,66,.1) 0%,transparent 45%),
+             radial-gradient(circle at 55% 85%,rgba(128,176,232,.12) 0%,transparent 40%);
+  pointer-events:none
+}
+.hero-visual-tagline{
+  font-family:var(--font-h);font-style:italic;
+  font-size:clamp(1.2rem,2vw,1.55rem);
+  font-weight:600;color:var(--lav);line-height:1.2;text-align:center;
+  position:relative;z-index:2
 }
 
-.hero-lede {
-  font-size: clamp(1rem, 1.8vw, 1.2rem); max-width: 36ch;
-  color: var(--ink-soft); font-weight: 600; margin-bottom: 1.8em; line-height: 1.6;
+/* ── DISCO BALL SVG ──────────────────────────────────────── */
+.disco-ball-wrap{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;align-items:center
 }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-
-.hero-right {
-  background: var(--lav-tint);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 1.5rem; padding: 3rem 2rem;
-  position: relative; overflow: hidden;
+.disco-ball-svg{
+  width:clamp(140px,20vw,200px);height:auto;
+  animation:discoSwing 7s ease-in-out infinite;
+  transform-origin:50% 2%;
+  filter:drop-shadow(0 16px 32px rgba(0,0,0,.5))
 }
-
-.hero-blob-1 {
-  position: absolute; width: 340px; height: 340px;
-  background: var(--sun); border-radius: 50%;
-  top: -80px; right: -60px; opacity: .5;
-  filter: blur(2px);
-}
-.hero-blob-2 {
-  position: absolute; width: 180px; height: 180px;
-  background: var(--coral); border-radius: 50%;
-  bottom: 20px; left: -30px; opacity: .4;
-  filter: blur(1px);
+@keyframes discoSwing{
+  0%,100%{transform:rotate(-3deg)}
+  50%{transform:rotate(3deg)}
 }
 
-.hero-mark-img {
-  position: relative; z-index: 2;
-  width: clamp(140px, 20vw, 200px); height: auto;
-  filter: drop-shadow(0 10px 28px rgba(58,42,63,.14));
+/* ── MARQUEES ────────────────────────────────────────────── */
+.marquee-wrap{overflow:hidden;padding:12px 0;position:relative}
+.marquee-wrap.m-coral{background:var(--coral);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.marquee-wrap.m-ink{background:var(--ink);border-bottom:2px solid var(--coral)}
+.marquee-track{display:flex;width:max-content}
+.marquee-track.fwd{animation:marqFwd 20s linear infinite}
+.marquee-track.rev{animation:marqRev 20s linear infinite}
+.marquee-track span{
+  white-space:nowrap;padding:0 .75rem;
+  font-family:var(--font-h);font-style:italic;font-weight:600;font-size:1rem
 }
-.hero-visual-tagline {
-  position: relative; z-index: 2;
-  font-family: var(--font-h); font-style: italic;
-  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
-  font-weight: 600; color: var(--ink); line-height: 1.25;
-  text-align: center;
-}
-
-/* ── MARQUEE ─────────────────────────────────────────────── */
-.marquee-wrap {
-  background: var(--coral);
-  border-top: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-  overflow: hidden;
-  padding: 13px 0;
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 22s linear infinite;
-}
-.marquee-track span {
-  font-family: var(--font-h); font-style: italic; font-weight: 600;
-  font-size: 1.05rem; color: var(--ink); padding: 0 1rem;
-  white-space: nowrap;
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
+.m-coral .marquee-track span{color:var(--ink)}
+.m-ink   .marquee-track span{color:var(--lav)}
+@keyframes marqFwd{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes marqRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* ── WELCOME ─────────────────────────────────────────────── */
-#welcome { padding: 72px 0; background: var(--paper); }
-#welcome .intro-name {
-  font-family: var(--font-h); font-size: clamp(1.4rem, 2.8vw, 1.9rem);
-  font-style: italic; margin-bottom: .5em; display: block;
+#welcome{padding:72px 0;background:var(--paper)}
+#welcome .intro-name{
+  font-family:var(--font-h);font-size:clamp(1.4rem,2.8vw,1.9rem);
+  font-style:italic;margin-bottom:.45em;display:block
 }
-#welcome p { max-width: 60ch; font-weight: 600; }
+#welcome p{max-width:58ch;font-weight:600}
 
 /* ── BADGES ──────────────────────────────────────────────── */
-#badges { padding: 48px 0; background: var(--cream); }
-.badges-top { text-align: center; margin-bottom: 1.4rem; }
-.badges-top h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); }
-.badges-sub { font-size: 1rem; color: var(--ink-soft); max-width: 42ch; margin: .35em auto 0; }
-.badge-row {
-  display: flex; flex-wrap: wrap; gap: 9px; justify-content: center;
-  max-width: 620px; margin: 0 auto;
+#badges{padding:44px 0;background:var(--cream)}
+.badges-top{text-align:center;margin-bottom:1.3rem}
+.badges-top h2{font-size:clamp(1.4rem,2.8vw,2rem)}
+.badges-sub{font-size:.97rem;color:var(--ink-soft);max-width:40ch;margin:.3em auto 0}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:600px;margin:0 auto}
+.badge{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:var(--font-b);font-weight:700;font-size:.9rem;
+  padding:6px 14px;border-radius:999px;border:2px solid
 }
-.badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-family: var(--font-b); font-weight: 700; font-size: .92rem;
-  padding: 7px 15px; border-radius: 999px; border: 2px solid;
-}
+
+/* ── TORN PAPER DIVIDERS ─────────────────────────────────── */
+.torn{display:block;width:100%;height:56px;margin-bottom:-2px}
+.torn.into-ink{fill:var(--ink)}
+.torn.into-cream{fill:var(--cream)}
+.torn.into-paper{fill:var(--paper)}
 
 /* ── ABOUT ───────────────────────────────────────────────── */
-#about {
-  background: var(--ink); color: var(--cream);
-  padding: 72px 0;
-  -webkit-font-smoothing: antialiased;
+#about{background:var(--ink);color:var(--cream);padding:64px 0 56px;-webkit-font-smoothing:antialiased}
+#about .eyebrow{color:var(--coral)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+#about h2{color:var(--cream);margin-bottom:.6em}
+#about h2 em{
+  font-style:italic;display:block;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:1.5px var(--coral)
 }
-#about .eyebrow { color: var(--coral); }
-.about-grid {
-  display: grid; grid-template-columns: 1.2fr .8fr;
-  gap: 60px; align-items: start;
-}
-#about h2 { color: var(--cream); margin-bottom: .6em; }
-#about h2 em {
-  font-style: italic;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px var(--coral);
-}
-#about h3 { font-size: 1.3rem; color: var(--cream); margin: 1.4em 0 .4em; }
-#about p { opacity: .86; max-width: 56ch; }
-#about p strong { opacity: 1; color: var(--cream); }
-.cred-note { font-size: .88rem; color: var(--lavender); opacity: .7 !important; margin-top: 1.4rem !important; line-height: 1.6; }
+#about h3{font-size:1.28rem;color:var(--cream);margin:1.3em 0 .35em}
+#about p{opacity:.84;max-width:56ch}
+#about p strong{opacity:1;color:var(--cream)}
+.cred-note{font-size:.86rem;color:var(--lav);opacity:.65!important;margin-top:1.3rem!important;line-height:1.6}
 
-.polaroid {
-  background: var(--paper); border: 2px solid var(--ink);
-  border-radius: 14px; padding: 13px 13px 52px;
-  transform: rotate(1.8deg);
-  box-shadow: 0 20px 44px -20px rgba(0,0,0,.5);
-  position: sticky; top: 120px;
+.polaroid{
+  background:var(--paper);border:2px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:12px 12px 50px;
+  transform:rotate(1.5deg);
+  box-shadow:0 22px 48px -16px rgba(0,0,0,.6);
+  position:sticky;top:110px
 }
-.polaroid .ph {
-  aspect-ratio: 4/5; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 20px; font-weight: 700; color: var(--ink);
-  background: linear-gradient(135deg, var(--sun-tint) 0%, var(--coral-tint) 50%, var(--lav-tint) 100%);
+.polaroid .ph{
+  aspect-ratio:4/5;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:20px;font-weight:700;color:var(--ink);
+  background:linear-gradient(135deg,var(--sun-t) 0%,var(--lav-t) 50%,#FFE8F3 100%)
 }
-.polaroid .cap {
-  position: absolute; bottom: 14px; left: 0; right: 0;
-  text-align: center; font-family: var(--font-h);
-  font-style: italic; font-size: 1.05rem; color: var(--ink);
+.polaroid .cap{
+  position:absolute;bottom:13px;left:0;right:0;
+  text-align:center;font-family:var(--font-h);
+  font-style:italic;font-size:1rem;color:var(--ink)
 }
 
 /* ── WHO I WORK WITH ─────────────────────────────────────── */
-#who {
-  background: var(--ink); color: var(--cream);
-  padding: 72px 0 0;
-  -webkit-font-smoothing: antialiased;
-}
-#who .who-hdr { margin-bottom: 2.5rem; }
-#who .who-hdr .eyebrow { color: var(--sun); }
-#who .who-hdr h2 { color: var(--cream); }
-#who .who-hdr p { max-width: 52ch; opacity: .82; font-weight: 600; }
+#who{background:var(--ink);color:var(--cream);padding:56px 0 0;-webkit-font-smoothing:antialiased}
+#who .who-hdr{margin-bottom:2.5rem}
+#who .who-hdr .eyebrow{color:var(--sun)}
+#who .who-hdr h2{color:var(--cream)}
+#who .who-hdr p{max-width:52ch;opacity:.8;font-weight:600}
 
-.who-list { list-style: none; border-top: 1px solid rgba(255,255,255,.1); }
-.who-entry {
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  padding: 30px 0;
-  border-left: 4px solid var(--accent, var(--coral));
-  padding-left: 28px;
-  margin-left: -28px;
-  transition: background .15s;
+.who-list{list-style:none;border-top:1px solid rgba(255,255,255,.1)}
+.who-entry{
+  border-bottom:1px solid rgba(255,255,255,.1);
+  padding:26px 0 26px 28px;
+  border-left:4px solid var(--accent,var(--coral));
+  margin-left:-28px;
+  transition:background .15s
 }
-.who-entry:hover { background: rgba(255,255,255,.03); }
-.who-entry-inner {
-  display: grid; grid-template-columns: 2.5rem 1fr;
-  gap: 1.5rem; align-items: start;
-}
-.who-num {
-  font-family: var(--font-h); font-style: italic;
-  font-size: 1.1rem; font-weight: 300;
-  opacity: .45; padding-top: .2em;
-}
-.who-label {
-  font-family: var(--font-b); font-weight: 800; font-size: .72rem;
-  text-transform: uppercase; letter-spacing: .13em;
-  color: var(--accent, var(--coral)); margin-bottom: .25em;
-}
-.who-entry h3 { font-size: 1.25rem; color: var(--cream); margin-bottom: .3em; }
-.who-entry p  { font-size: .97rem; opacity: .8; max-width: 55ch; margin: 0; }
+.who-entry:hover{background:rgba(255,255,255,.03)}
+.who-entry-inner{display:grid;grid-template-columns:2.2rem 1fr;gap:1.2rem;align-items:start}
+.who-num{font-family:var(--font-h);font-style:italic;font-size:1rem;opacity:.35;padding-top:.25em}
+.who-label{font-family:var(--font-b);font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--accent,var(--coral));margin-bottom:.2em}
+.who-entry h3{font-size:1.22rem;color:var(--cream);margin-bottom:.3em}
+.who-entry p{font-size:.95rem;opacity:.78;max-width:55ch;margin:0}
 
-.who-endnote {
-  padding: 40px 28px; text-align: center;
-  font-family: var(--font-h); font-style: italic;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  color: var(--lavender); line-height: 1.35;
+.who-endnote{
+  padding:36px 28px;text-align:center;
+  font-family:var(--font-h);font-style:italic;
+  font-size:clamp(1.05rem,2vw,1.4rem);color:var(--lav);line-height:1.35
 }
 
 /* ── WORKING TOGETHER ────────────────────────────────────── */
-#working { padding: 72px 0; background: var(--cream); }
-#working .eyebrow { color: var(--teal); }
-#working > .wrap > .reveal > p { max-width: 52ch; font-weight: 600; }
-
-.working-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 3rem 4.5rem; margin-top: 3rem;
-  padding-top: 2.5rem; border-top: 2px solid var(--ink);
+#working{padding:72px 0;background:var(--cream)}
+#working .eyebrow{color:var(--teal)}
+.working-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2.8rem 4rem;margin-top:2.8rem;
+  padding-top:2.4rem;border-top:2.5px solid var(--ink)
 }
-.working-item h3 { font-size: 1.2rem; margin-bottom: .4em; }
-.working-item p { font-size: .97rem; max-width: 38ch; font-weight: 600; }
-.working-item p:last-child { margin-bottom: 0; }
-.price {
-  font-family: var(--font-h); font-style: italic; font-weight: 400;
-  color: var(--teal); font-size: 1rem; margin-top: .4em;
+.working-item h3{margin-bottom:.4em}
+.working-item p{font-size:.97rem;max-width:37ch;font-weight:600}
+.working-item p:last-child{margin-bottom:0}
+.price{
+  font-family:var(--font-h);font-style:italic;font-weight:400;
+  color:var(--teal);font-size:.97rem;margin-top:.35em
 }
-.working-full {
-  grid-column: 1 / -1;
-  padding-top: 2rem; border-top: 1px solid rgba(58,42,63,.12);
+.working-full{
+  grid-column:1/-1;padding-top:2rem;
+  border-top:1px solid rgba(58,42,63,.12)
 }
-.working-full p { max-width: 68ch; }
-.working-cta { margin-top: 2.5rem; text-align: center; }
+.working-full p{max-width:68ch}
+.working-cta{margin-top:2.5rem;text-align:center}
 
 /* ── FAQ ─────────────────────────────────────────────────── */
-#faq { padding: 72px 0; background: var(--paper); }
-#faq .faq-head { text-align: center; margin-bottom: .5rem; }
-#faq .eyebrow { color: var(--lilac); display: block; text-align: center; }
-.faq-list { max-width: 720px; margin: 2rem auto 0; }
-.q { border-bottom: 1.5px solid rgba(58,42,63,.1); }
-.q button {
-  width: 100%; text-align: left; background: none; border: none;
-  cursor: pointer; font-family: var(--font-h); font-weight: 600;
-  font-size: 1.1rem; color: var(--ink);
-  padding: 20px 44px 20px 0; position: relative; line-height: 1.3;
+#faq{padding:72px 0;background:var(--paper)}
+#faq .eyebrow{color:var(--lilac);text-align:center;display:block}
+#faq .faq-head{text-align:center;margin-bottom:.5rem}
+.faq-list{max-width:700px;margin:2rem auto 0}
+.q{border-bottom:1.5px solid rgba(58,42,63,.1)}
+.q button{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  font-family:var(--font-h);font-weight:600;font-size:1.08rem;color:var(--ink);
+  padding:20px 44px 20px 0;position:relative;line-height:1.3
 }
-.q button .plus {
-  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
-  font-family: var(--font-b); font-weight: 800; font-size: 1.4rem;
-  color: var(--coral); transition: transform .2s;
+.q button .plus{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-b);font-weight:800;font-size:1.4rem;
+  color:var(--coral);transition:transform .2s
 }
-.q button[aria-expanded="true"] .plus { transform: translateY(-50%) rotate(45deg); }
-.q .ans { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-.q .ans p { padding: 0 0 20px; margin: 0; color: var(--ink-soft); font-weight: 600; font-size: .97rem; }
+.q button[aria-expanded="true"] .plus{transform:translateY(-50%) rotate(45deg)}
+.q .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.q .ans p{padding:0 0 18px;margin:0;color:var(--ink-soft);font-weight:600;font-size:.95rem}
 
 /* ── CONTACT ─────────────────────────────────────────────── */
-#contact { padding: 72px 0; background: var(--cream); }
-.contact-box {
-  background: var(--ink); color: var(--cream);
-  border-radius: 32px; padding: 60px 48px;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
+#contact{padding:72px 0;background:var(--cream)}
+.contact-box{
+  background:var(--ink);color:var(--cream);
+  border-radius:28px;padding:56px 44px;text-align:center;
+  -webkit-font-smoothing:antialiased
 }
-.contact-box h2 { color: var(--cream); margin-bottom: .4em; }
-.contact-box > p { color: #E0D4E4; max-width: 48ch; margin: 0 auto .8em; }
-.cform {
-  max-width: 500px; margin: 28px auto 0; text-align: left;
-  display: flex; flex-direction: column; gap: 14px;
+.contact-box h2{color:var(--cream);margin-bottom:.4em}
+.contact-box>p{color:#DDD0E0;max-width:46ch;margin:0 auto .75em}
+.cform{max-width:480px;margin:26px auto 0;text-align:left;display:flex;flex-direction:column;gap:13px}
+.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.cform label{display:block;font-family:var(--font-b);font-weight:800;font-size:.85rem;margin-bottom:5px;color:var(--cream)}
+.cform input,.cform textarea{
+  width:100%;font-family:var(--font-b);font-size:1rem;
+  padding:11px 14px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.95);color:var(--ink);outline:none;transition:border-color .2s
 }
-.cform .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.cform label { display: block; font-family: var(--font-b); font-weight: 800; font-size: .87rem; margin-bottom: 5px; color: var(--cream); }
-.cform input, .cform textarea {
-  width: 100%; font-family: var(--font-b); font-size: 1rem;
-  padding: 12px 14px; border-radius: 10px;
-  border: 1.5px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.95); color: var(--ink); outline: none;
-  transition: border-color .2s;
+.cform input:focus,.cform textarea:focus{border-color:var(--sun);outline:2px solid var(--sun);outline-offset:2px}
+.cform textarea{min-height:95px;resize:vertical;line-height:1.55}
+.cform-actions{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:4px}
+.btn--book{background:transparent;color:var(--cream);border-color:rgba(255,255,255,.35);box-shadow:0 5px 0 rgba(255,255,255,.2)}
+.btn--book:hover{background:var(--teal);border-color:var(--teal)}
+.cform-status{margin-top:8px;font-weight:800;color:var(--sun);min-height:1.2em;font-size:.9rem}
+.crisis{
+  margin:24px auto 0;max-width:54ch;font-size:.86rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+  border-radius:11px;padding:14px 18px;color:#EDE4EF;line-height:1.6
 }
-.cform input:focus, .cform textarea:focus { border-color: var(--sun); outline: 2px solid var(--sun); outline-offset: 2px; }
-.cform textarea { min-height: 100px; resize: vertical; line-height: 1.55; }
-.cform-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 4px; }
-.btn--book { background: transparent; color: var(--cream); border-color: rgba(255,255,255,.4); }
-.btn--book:hover { background: var(--teal); border-color: var(--teal); }
-.cform-status { margin-top: 8px; font-weight: 800; color: var(--sun); min-height: 1.2em; font-size: .92rem; }
-.crisis {
-  margin: 26px auto 0; max-width: 56ch; font-size: .88rem;
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
-  border-radius: 12px; padding: 15px 20px; color: #EDE4EF; line-height: 1.6;
-}
-.crisis a { color: var(--sun); font-weight: 800; }
+.crisis a{color:var(--sun);font-weight:800}
 
 /* ── FOOTER ──────────────────────────────────────────────── */
-footer {
-  background: var(--ink); color: var(--cream); padding: 48px 28px 52px;
-  text-align: center; -webkit-font-smoothing: antialiased;
-  border-top: 1.5px solid rgba(255,255,255,.08);
+footer{
+  background:var(--ink);color:var(--cream);
+  padding:44px 28px 52px;text-align:center;
+  border-top:1.5px solid rgba(255,255,255,.07);
+  -webkit-font-smoothing:antialiased
 }
-.footer-brand {
-  font-family: var(--font-h); font-style: italic;
-  font-size: 1.45rem; color: var(--cream); margin-bottom: .7rem;
-  display: flex; align-items: center; justify-content: center; gap: 12px;
+.footer-brand{
+  font-family:var(--font-h);font-style:italic;font-size:1.4rem;
+  color:var(--cream);margin-bottom:.65rem;
+  display:flex;align-items:center;justify-content:center;gap:12px
 }
-footer p { font-size: .88rem; color: #C8B8CC; margin-bottom: .45em; }
-footer .fine { font-size: .76rem; opacity: .5; margin-top: 1.4rem; }
+footer p{font-size:.86rem;color:#C4B4C8;margin-bottom:.4em}
+footer .fine{font-size:.74rem;opacity:.45;margin-top:1.3rem}
 
 /* ── REVEAL ──────────────────────────────────────────────── */
-.anim .reveal {
-  opacity: 0; transform: translateY(16px);
-  transition: opacity .6s ease, transform .6s ease;
-}
-.anim .reveal.in { opacity: 1; transform: none; }
+.anim .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.anim .reveal.in{opacity:1;transform:none}
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
-@media (max-width: 860px) {
-  #hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { min-height: 48vw; padding: 3rem; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .polaroid { transform: none; max-width: 320px; margin: 0 auto; position: static; }
-  .working-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .working-full { border-top: none; padding-top: 0; }
-  .contact-box { padding: 44px 24px; border-radius: 24px; }
+@media(max-width:860px){
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{min-height:50vw}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .polaroid{transform:none;max-width:300px;margin:0 auto;position:static}
+  .working-grid{grid-template-columns:1fr;gap:2.2rem}
+  .working-full{border-top:none;padding-top:0}
+  .contact-box{padding:40px 22px;border-radius:22px}
 }
-
-@media (max-width: 640px) {
-  h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
-  .who-entry-inner { grid-template-columns: 1fr; gap: .5rem; }
-  .who-num { display: none; }
-  .cform .row { grid-template-columns: 1fr; }
-  .links { display: none; }
-  .links.open {
-    display: flex; flex-direction: column; position: fixed;
-    inset: 58px 0 auto 0; background: var(--paper);
-    border-bottom: 2px solid var(--ink); padding: 6px 0 14px;
-    gap: 0; z-index: 199;
+@media(max-width:640px){
+  .hero-h1{line-height:.97}
+  .who-entry-inner{grid-template-columns:1fr;gap:.4rem}
+  .who-num{display:none}
+  .cform .row{grid-template-columns:1fr}
+  .links{display:none}
+  .links.open{
+    display:flex;flex-direction:column;position:fixed;
+    inset:57px 0 auto 0;background:var(--paper);
+    border-bottom:2px solid var(--ink);padding:5px 0 13px;
+    gap:0;z-index:199
   }
-  .links a { padding: 13px 28px; border-top: 1px solid rgba(58,42,63,.09); }
-  .links .btn { margin: 10px 28px 0; text-align: center; display: block; }
-  .nav-toggle { display: block; }
+  .links a{padding:12px 28px;border-top:1px solid rgba(58,42,63,.08)}
+  .links .btn{margin:9px 28px 0;text-align:center;display:block}
+  .nav-toggle{display:block}
 }
 </style>
 </head>
@@ -497,7 +431,7 @@ footer .fine { font-size: .76rem; opacity: .5; margin-top: 1.4rem; }
 <header class="nav" id="nav">
   <div class="nav-in">
     <a class="brand" href="#hero">
-      <!-- swap with: <img src="images/logo-mark.png" alt="Reflecting Therapy"> -->
+      <!-- swap for: <img src="images/wordmark.png" alt="Reflecting Therapy"> -->
       <span class="brand-text">Reflecting Therapy</span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">menu</button>
@@ -513,266 +447,321 @@ footer .fine { font-size: .76rem; opacity: .5; margin-top: 1.4rem; }
 
 <main>
 
-  <!-- ── HERO ────────────────────────────────────────────── -->
-  <section id="hero" aria-labelledby="hero-h">
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section id="hero" aria-labelledby="hero-h">
 
-    <div class="hero-left">
-      <span class="sticker">
-        <span class="disco" aria-hidden="true"></span>
-        take your shoes off, stay a while
-      </span>
-      <h1 id="hero-h" class="hero-h1">
-        You don't<br>have to be<br>
-        <em>the strong one</em><br>
-        in here.
-      </h1>
-      <p class="hero-lede">Warm, colorful, deeply un-shockable therapy in Atlanta — for individuals and couples figuring out the hard, human stuff.</p>
-      <div class="hero-ctas">
-        <a class="btn" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Book a free consult</a>
-        <a class="btn btn--ghost" href="#about">A little about me</a>
-      </div>
-    </div>
+  <div class="hero-left">
+    <span class="sticker">
+      <span class="starburst" aria-hidden="true"></span>
+      take your shoes off, stay a while
+    </span>
 
-    <div class="hero-right" aria-hidden="true">
-      <span class="hero-blob-1"></span>
-      <span class="hero-blob-2"></span>
-      <img class="hero-mark-img" src="images/logo-mark.png" alt="">
-      <p class="hero-visual-tagline">You're not<br>too much.</p>
-    </div>
+    <h1 id="hero-h" class="hero-h1">
+      You don't<br>
+      have to be<br>
+      <em>the strong</em><br>
+      one in here.
+    </h1>
 
-  </section>
+    <p class="hero-lede">Warm, colorful, deeply un-shockable therapy in Atlanta — for individuals and couples figuring out the hard, human stuff.</p>
 
-  <!-- ── MARQUEE ──────────────────────────────────────────── -->
-  <div class="marquee-wrap" aria-hidden="true">
-    <div class="marquee-track">
-      <span>take your shoes off ✦ stay a while ✦ you're welcome here ✦ no judgment ✦ rest is a right ✦ you're not too much ✦ </span>
-      <span>take your shoes off ✦ stay a while ✦ you're welcome here ✦ no judgment ✦ rest is a right ✦ you're not too much ✦ </span>
+    <div class="hero-ctas">
+      <a class="btn" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Book a free consult</a>
+      <a class="btn btn--ghost" href="#about">A little about me</a>
     </div>
   </div>
 
-  <!-- ── WELCOME ──────────────────────────────────────────── -->
-  <section id="welcome" aria-label="Welcome">
-    <div class="wrap reveal">
-      <span class="intro-name">Hi, I'm Molly.</span>
-      <p>Maybe you're the one everyone leans on, quietly running on empty. Maybe your relationships don't fit the shape the world handed you, and you're tired of explaining yourself. Maybe you're getting curious about your sexuality, or what you actually want — not what you were told to want. Maybe something just feels a little off, and you can't quite name it yet.</p>
-      <p>Wherever you're landing from: you're welcome here, exactly as you are. Not the polished version. The real one. My whole job is to be in your corner while you come home to yourself — no judgment, no fixing, no pretending. Just a person who genuinely gets it, in a room with good light and probably too many plants.</p>
+  <div class="hero-right" aria-hidden="true">
+    <div class="disco-ball-wrap">
+      <!-- Disco ball SVG -->
+      <svg class="disco-ball-svg" viewBox="0 0 120 136" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="dc-clip">
+            <circle cx="60" cy="82" r="52"/>
+          </clipPath>
+          <radialGradient id="dc-shade" cx="36%" cy="30%" r="72%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="white" stop-opacity=".55"/>
+            <stop offset="45%" stop-color="white" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#0a0010" stop-opacity=".55"/>
+          </radialGradient>
+          <pattern id="dc-tiles" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
+            <rect x="1" y="1" width="9" height="9" fill="#c4c4d0" rx="1.5"/>
+          </pattern>
+        </defs>
+        <!-- wire -->
+        <line x1="60" y1="2" x2="60" y2="31" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- ceiling mount -->
+        <circle cx="60" cy="2" r="3" fill="#888"/>
+        <!-- ball base -->
+        <circle cx="60" cy="82" r="52" fill="#9898a8"/>
+        <!-- tile grid -->
+        <rect x="8" y="30" width="104" height="104" fill="url(#dc-tiles)" clip-path="url(#dc-clip)"/>
+        <!-- brand-color reflections -->
+        <ellipse cx="42" cy="64" rx="13" ry="8" fill="#FF9DC6" opacity=".65" clip-path="url(#dc-clip)"/>
+        <ellipse cx="78" cy="70" rx="11" ry="7" fill="#F4D242" opacity=".65" clip-path="url(#dc-clip)"/>
+        <ellipse cx="55" cy="96" rx="12" ry="7" fill="#80B0E8" opacity=".6" clip-path="url(#dc-clip)"/>
+        <ellipse cx="30" cy="88" rx="9" ry="6" fill="#008471" opacity=".55" clip-path="url(#dc-clip)"/>
+        <ellipse cx="84" cy="90" rx="10" ry="6" fill="#D1CAEA" opacity=".55" clip-path="url(#dc-clip)"/>
+        <ellipse cx="65" cy="55" rx="9" ry="5" fill="#FF9DC6" opacity=".45" clip-path="url(#dc-clip)"/>
+        <ellipse cx="40" cy="100" rx="7" ry="4" fill="#F4D242" opacity=".45" clip-path="url(#dc-clip)"/>
+        <ellipse cx="76" cy="100" rx="8" ry="5" fill="#FF9DC6" opacity=".4" clip-path="url(#dc-clip)"/>
+        <ellipse cx="58" cy="115" rx="9" ry="5" fill="#80B0E8" opacity=".4" clip-path="url(#dc-clip)"/>
+        <!-- sphere shading -->
+        <circle cx="60" cy="82" r="52" fill="url(#dc-shade)"/>
+        <!-- main highlight -->
+        <ellipse cx="46" cy="64" rx="11" ry="8" fill="white" opacity=".65"/>
+        <ellipse cx="44" cy="62" rx="5.5" ry="3.5" fill="white" opacity=".9"/>
+      </svg>
     </div>
-  </section>
+    <p class="hero-visual-tagline">You're not<br>too much.</p>
+  </div>
 
-  <!-- ── AFFIRMING BADGES ─────────────────────────────────── -->
-  <section id="badges" aria-label="Affirming identities">
-    <div class="wrap">
-      <div class="badges-top reveal">
-        <span class="eyebrow" style="color:var(--lilac);text-align:center;display:block;">A safe place to land</span>
-        <h2>You're welcome here, exactly as you are</h2>
-        <p class="badges-sub">No part of you is the problem we're here to fix.</p>
-      </div>
-      <div class="badge-row reveal">
-        <span class="badge" style="background:var(--lav-tint);border-color:var(--lavender);">🏳️‍🌈 LGBTQ+ Affirming</span>
-        <span class="badge" style="background:var(--coral-tint);border-color:var(--coral);">🏳️‍⚧️ Trans Affirming</span>
-        <span class="badge" style="background:var(--teal-tint);border-color:var(--teal);">💞 Poly &amp; ENM Aware</span>
-        <span class="badge" style="background:var(--sun-tint);border-color:var(--sun);">🔗 Kink Aware</span>
-        <span class="badge" style="background:var(--coral-tint);border-color:var(--coral);">🌼 All Bodies Welcome</span>
-        <span class="badge" style="background:var(--lav-tint);border-color:var(--lavender);">✨ Sex-Positive</span>
-      </div>
+</section>
+
+<!-- ── DUAL MARQUEES ──────────────────────────────────────── -->
+<div class="marquee-wrap m-coral" aria-hidden="true">
+  <div class="marquee-track fwd">
+    <span>take your shoes off ✦ stay a while ✦ you're welcome here ✦ no judgment ✦ rest is a right ✦ you're not too much ✦ </span>
+    <span>take your shoes off ✦ stay a while ✦ you're welcome here ✦ no judgment ✦ rest is a right ✦ you're not too much ✦ </span>
+  </div>
+</div>
+<div class="marquee-wrap m-ink" aria-hidden="true">
+  <div class="marquee-track rev">
+    <span>affirming ✦ judgment-free ✦ warm ✦ colorful ✦ deeply human ✦ for the ones who hold everything ✦ rest included ✦ </span>
+    <span>affirming ✦ judgment-free ✦ warm ✦ colorful ✦ deeply human ✦ for the ones who hold everything ✦ rest included ✦ </span>
+  </div>
+</div>
+
+<!-- ── WELCOME ──────────────────────────────────────────── -->
+<section id="welcome" aria-label="Welcome">
+  <div class="wrap reveal">
+    <span class="intro-name">Hi, I'm Molly.</span>
+    <p>Maybe you're the one everyone leans on, quietly running on empty. Maybe your relationships don't fit the shape the world handed you, and you're tired of explaining yourself. Maybe you're getting curious about your sexuality, or what you actually want — not what you were told to want. Maybe something just feels a little off, and you can't quite name it yet.</p>
+    <p>Wherever you're landing from: you're welcome here, exactly as you are. Not the polished version. The real one. My whole job is to be in your corner while you come home to yourself — no judgment, no fixing, no pretending. Just a person who genuinely gets it, in a room with good light and probably too many plants.</p>
+  </div>
+</section>
+
+<!-- ── BADGES ───────────────────────────────────────────── -->
+<section id="badges" aria-label="Affirming identities">
+  <div class="wrap">
+    <div class="badges-top reveal">
+      <span class="eyebrow" style="color:var(--lilac);text-align:center;display:block;">A safe place to land</span>
+      <h2>You're welcome here, exactly as you are</h2>
+      <p class="badges-sub">No part of you is the problem we're here to fix.</p>
     </div>
-  </section>
-
-  <!-- ── ABOUT ────────────────────────────────────────────── -->
-  <section id="about" aria-labelledby="about-h">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="reveal">
-          <span class="eyebrow">About</span>
-          <h2 id="about-h">I didn't take the straight road to this chair —<br><em>thank goodness.</em></h2>
-          <p>Before I was a therapist, I was a sex educator. I spent years talking openly, without flinching, about bodies and desire and shame. What I kept noticing was that so many people believed something was wrong with them, when really they'd just never been in a room that got them. That's why I became a therapist — and it's the feeling I try to recreate every time someone sits down across from me.</p>
-          <p>In the room, I'm warm and pretty laid-back. I'll laugh with you, go deep when it's time, and know when to come up for air. I believe healing is allowed to have color and joy and a little whimsy in it — that your inner child gets a seat at the table, and that rest is a right, not a reward.</p>
-          <p><strong>And, because it matters: I'm a therapist who has a therapist. I'd never ask you to go somewhere I'm not willing to go myself.</strong></p>
-          <h3>I'm not here to tell you you're "so strong."</h3>
-          <p>You've heard it your whole life — <em>you're so resilient, you handle everything so well, I don't know how you do it.</em> And you're tired, because the people saying it have no idea what it costs you to keep doing it.</p>
-          <p>Here's what I actually believe: your people survived things that should have been unsurvivable — and not so you could spend this one life white-knuckling your way through, calling it "fine." You're allowed to want more than fine. That's the whole reason I do this.</p>
-          <p class="cred-note">Molly Schwartz, MA, NCC — practicing in Atlanta, GA. Telehealth available across Georgia. A Good Faith Estimate is available on request.</p>
-        </div>
-        <div class="reveal">
-          <div class="polaroid">
-            <div class="ph">[ Your photo here — something bright &amp; you ]</div>
-            <span class="cap">me, probably mid-laugh</span>
-          </div>
-        </div>
-      </div>
+    <div class="badge-row reveal">
+      <span class="badge" style="background:var(--lav-t);border-color:var(--lav);">🏳️‍🌈 LGBTQ+ Affirming</span>
+      <span class="badge" style="background:#FFE8F3;border-color:var(--coral);">🏳️‍⚧️ Trans Affirming</span>
+      <span class="badge" style="background:var(--teal-t);border-color:var(--teal);">💞 Poly &amp; ENM Aware</span>
+      <span class="badge" style="background:var(--sun-t);border-color:var(--sun);">🔗 Kink Aware</span>
+      <span class="badge" style="background:#FFE8F3;border-color:var(--coral);">🌼 All Bodies Welcome</span>
+      <span class="badge" style="background:var(--lav-t);border-color:var(--lav);">✨ Sex-Positive</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── WHO I WORK WITH ──────────────────────────────────── -->
-  <section id="who" aria-labelledby="who-h">
-    <div class="wrap">
-      <header class="who-hdr reveal">
-        <span class="eyebrow">Who I work with</span>
-        <h2 id="who-h">Chances are, you're exactly who I'm here for.</h2>
-        <p>I work with individuals and couples — and yes, relationships with more than two people, too. Most folks find me for one of these reasons, though plenty are a beautiful mix of several.</p>
-      </header>
-    </div>
+<!-- ── TORN PAPER DIVIDER → into dark ──────────────────── -->
+<svg class="torn into-ink" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,28 L48,14 L96,32 L144,10 L192,34 L240,16 L288,36 L336,12 L384,30 L432,8 L480,32 L528,18 L576,38 L624,12 L672,30 L720,14 L768,36 L816,10 L864,34 L912,16 L960,38 L1008,8 L1056,28 L1104,12 L1152,34 L1200,18 L1248,36 L1296,14 L1344,30 L1392,10 L1440,28 L1440,56 L0,56 Z"/>
+</svg>
 
-    <ul class="who-list wrap">
-      <li class="who-entry reveal" style="--accent: var(--coral);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">01</span>
-          <div>
-            <p class="who-label">Eldest daughters</p>
-            <h3>The one who holds everyone</h3>
-            <p>You were the responsible one, the fixer, the family's unofficial therapist before you could legally drive. Let's let you be a person with needs — not just a role everyone relies on. Rest included.</p>
-          </div>
-        </div>
-      </li>
-      <li class="who-entry reveal" style="--accent: var(--lilac);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">02</span>
-          <div>
-            <p class="who-label">Complex relationships</p>
-            <h3>Relationships that don't fit the template</h3>
-            <p>Blended, long-distance, on-again, hard to summarize at Thanksgiving — we'll untangle it without anyone telling you what your relationship is "supposed" to look like.</p>
-          </div>
-        </div>
-      </li>
-      <li class="who-entry reveal" style="--accent: var(--coral);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">03</span>
-          <div>
-            <p class="who-label">Sexuality</p>
-            <h3>Curious, shifting, surprising desire</h3>
-            <p>Maybe your relationship with desire has gone quiet, gotten louder, or surprised you. Nothing about it is a problem to solve. We'll get curious together — gently, shame-free.</p>
-          </div>
-        </div>
-      </li>
-      <li class="who-entry reveal" style="--accent: var(--sun);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">04</span>
-          <div>
-            <p class="who-label">LGBTQIA+</p>
-            <h3>Affirming, full stop</h3>
-            <p>Your identity isn't the thing we're here to fix or examine — it's just part of the whole, wonderful person I get to work with. You won't have to educate me to be understood.</p>
-          </div>
-        </div>
-      </li>
-      <li class="who-entry reveal" style="--accent: var(--teal);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">05</span>
-          <div>
-            <p class="who-label">Poly &amp; nonmonogamy</p>
-            <h3>No pathologizing your structure</h3>
-            <p>I won't treat jealousy like proof something's broken. I know the language, I respect the work it takes, and we can focus on the real stuff: communication, agreements, and the very human feelings underneath.</p>
-          </div>
-        </div>
-      </li>
-      <li class="who-entry reveal" style="--accent: var(--lavender);">
-        <div class="who-entry-inner">
-          <span class="who-num" aria-hidden="true">06</span>
-          <div>
-            <p class="who-label">Kink community</p>
-            <h3>You're safe here</h3>
-            <p>Curiosity and judgment can't share a chair, so I leave the judgment out. We focus on communication, consent, shame resilience, and care — never on explaining or defending who you are.</p>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-    <p class="who-endnote reveal">And if none of those fit perfectly? You don't have to come with a category. You just have to come as you are.</p>
-  </section>
-
-  <!-- ── WORKING TOGETHER ──────────────────────────────────── -->
-  <section id="working" aria-labelledby="working-h">
-    <div class="wrap">
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-grid">
       <div class="reveal">
-        <span class="eyebrow">Working together</span>
-        <h2 id="working-h">What it actually looks like.</h2>
-        <p>The logistics, made human — because you deserve to know what you're walking into before you walk into it.</p>
+        <span class="eyebrow">About</span>
+        <h2 id="about-h">I didn't take the straight road to this chair —<br><em>thank goodness.</em></h2>
+        <p>Before I was a therapist, I was a sex educator. I spent years talking openly, without flinching, about bodies and desire and shame. What I kept noticing was that so many people believed something was wrong with them, when really they'd just never been in a room that got them. That's why I became a therapist — and it's the feeling I try to recreate every time someone sits down across from me.</p>
+        <p>In the room, I'm warm and pretty laid-back. I'll laugh with you, go deep when it's time, and know when to come up for air. I believe healing is allowed to have color and joy and a little whimsy in it — that your inner child gets a seat at the table, and that rest is a right, not a reward.</p>
+        <p><strong>And, because it matters: I'm a therapist who has a therapist. I'd never ask you to go somewhere I'm not willing to go myself.</strong></p>
+        <h3>I'm not here to tell you you're "so strong."</h3>
+        <p>You've heard it your whole life — <em>you're so resilient, you handle everything so well, I don't know how you do it.</em> And you're tired, because the people saying it have no idea what it costs you to keep doing it.</p>
+        <p>Here's what I actually believe: your people survived things that should have been unsurvivable — and not so you could spend this one life white-knuckling your way through, calling it "fine." You're allowed to want more than fine. That's the whole reason I do this.</p>
+        <p class="cred-note">Molly Schwartz, MA, NCC — practicing in Atlanta, GA. Telehealth available across Georgia. A Good Faith Estimate is available on request.</p>
       </div>
-      <div class="working-grid">
-        <div class="working-item reveal">
-          <h3>Individual therapy</h3>
-          <p>One-on-one time that's entirely yours. Sometimes practical and skills-focused, sometimes deep and tender, often both. We follow what you actually need — no script.</p>
-          <p class="price">50 minutes · usually weekly to start</p>
+      <div class="reveal">
+        <div class="polaroid">
+          <div class="ph">[ Your photo here — something bright &amp; you ]</div>
+          <span class="cap">me, probably mid-laugh</span>
         </div>
-        <div class="working-item reveal">
-          <h3>Couples &amp; relationships</h3>
-          <p>Whether you're two people or a polycule, this is a place to be heard without it turning into a referee match. We'll slow the painful loops and rebuild the kind of communication that makes a relationship feel safe again.</p>
-          <p class="price">Available — reach out to discuss</p>
-        </div>
-        <div class="working-item working-full reveal">
-          <h3>The practical stuff</h3>
-          <p>I see clients by telehealth across Georgia and in person in Atlanta. I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is available — if cost is a barrier, reach out anyway and let's talk. You also have a right to a Good Faith Estimate of what your care will cost, and I'm always happy to talk money plainly. It's part of your care, not a side conversation.</p>
-          <p style="font-weight:700;margin-bottom:0;">We begin with a free 15-minute consult — a low-stakes conversation to feel each other out. No commitment, no pressure. The right fit matters, and I'd genuinely rather help you find the right person than be the wrong one.</p>
-        </div>
-      </div>
-      <div class="working-cta reveal">
-        <a class="btn" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Book a free consult</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── FAQ ──────────────────────────────────────────────── -->
-  <section id="faq" aria-labelledby="faq-h">
-    <div class="wrap">
-      <div class="faq-head reveal">
-        <span class="eyebrow">Good questions</span>
-        <h2 id="faq-h">The things you're probably already wondering.</h2>
+<!-- ── WHO I WORK WITH ─────────────────────────────────── -->
+<section id="who" aria-labelledby="who-h">
+  <div class="wrap">
+    <header class="who-hdr reveal">
+      <span class="eyebrow">Who I work with</span>
+      <h2 id="who-h">Chances are, you're exactly who I'm here for.</h2>
+      <p>I work with individuals and couples — and yes, relationships with more than two people, too. Most folks find me for one of these reasons, though plenty are a beautiful mix of several.</p>
+    </header>
+  </div>
+  <ul class="who-list wrap">
+    <li class="who-entry reveal" style="--accent:var(--coral)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">01</span>
+        <div>
+          <p class="who-label">Eldest daughters</p>
+          <h3>The one who holds everyone</h3>
+          <p>You were the responsible one, the fixer, the family's unofficial therapist before you could legally drive. Let's let you be a person with needs — not just a role everyone relies on. Rest included.</p>
+        </div>
       </div>
-      <div class="faq-list reveal">
-        <div class="q"><button aria-expanded="false"><span>How do I know if I even need therapy?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>You don't have to be in crisis to deserve support. If something's been sitting heavy, if you keep circling the same thing, or if you're just curious what it'd be like to have a person in your corner — that's reason enough. Therapy isn't only for emergencies. It's also for becoming more yourself.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>What's a consult, and what happens after?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>It's a free, casual 15-minute call where we talk about what's bringing you in and whether we're a good fit. If it feels right, we'll schedule a first session. If it doesn't, I'll happily point you toward someone who might be a better match. No pressure either way.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>I've never done therapy before. Is that weird?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>Not even a little. Lots of my clients are first-timers, and "I have no idea how this works" is a completely normal place to start. I'll walk you through everything. You don't have to be good at therapy to come to therapy.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>Is this really judgment-free for kink, nonmonogamy, and queer identities?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>Yes — genuinely, not as a buzzword. I won't pathologize your relationship structure, your identity, or your desires, and you won't have to teach me the basics to be understood. It's one of the main reasons people come to me, and I take it seriously.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>Do you work with more than two people in a relationship?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>I do. Relationships come in lots of shapes, and I'm glad to work with polycules and multi-partner configurations — together or individually, whatever serves the work best.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>Do you take insurance?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is also available. If cost is a worry, please reach out anyway — I'd rather problem-solve with you than have money quietly keep you away.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>How long will I be in therapy?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>There's no set answer, and anyone who promises one is guessing. Some people come for a specific season; others stay longer because they like the space. We'll check in regularly about what's working — you're always in the driver's seat.</p></div></div>
-        <div class="q"><button aria-expanded="false"><span>Where are you located?</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="ans"><p>I see clients by telehealth across Georgia and in person in Atlanta.</p></div></div>
+    </li>
+    <li class="who-entry reveal" style="--accent:var(--lilac)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">02</span>
+        <div>
+          <p class="who-label">Complex relationships</p>
+          <h3>Relationships that don't fit the template</h3>
+          <p>Blended, long-distance, on-again, hard to summarize at Thanksgiving — we'll untangle it without anyone telling you what your relationship is "supposed" to look like.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </li>
+    <li class="who-entry reveal" style="--accent:var(--coral)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">03</span>
+        <div>
+          <p class="who-label">Sexuality</p>
+          <h3>Curious, shifting, surprising desire</h3>
+          <p>Maybe your relationship with desire has gone quiet, gotten louder, or surprised you. Nothing about it is a problem to solve. We'll get curious together — gently, shame-free.</p>
+        </div>
+      </div>
+    </li>
+    <li class="who-entry reveal" style="--accent:var(--sun)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">04</span>
+        <div>
+          <p class="who-label">LGBTQIA+</p>
+          <h3>Affirming, full stop</h3>
+          <p>Your identity isn't the thing we're here to fix or examine — it's just part of the whole, wonderful person I get to work with. You won't have to educate me to be understood.</p>
+        </div>
+      </div>
+    </li>
+    <li class="who-entry reveal" style="--accent:var(--teal-t)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">05</span>
+        <div>
+          <p class="who-label">Poly &amp; nonmonogamy</p>
+          <h3>No pathologizing your structure</h3>
+          <p>I won't treat jealousy like proof something's broken. I know the language, I respect the work it takes, and we can focus on the real stuff: communication, agreements, and the very human feelings underneath.</p>
+        </div>
+      </div>
+    </li>
+    <li class="who-entry reveal" style="--accent:var(--lav)">
+      <div class="who-entry-inner">
+        <span class="who-num" aria-hidden="true">06</span>
+        <div>
+          <p class="who-label">Kink community</p>
+          <h3>You're safe here</h3>
+          <p>Curiosity and judgment can't share a chair, so I leave the judgment out. We focus on communication, consent, shame resilience, and care — never on explaining or defending who you are.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <p class="who-endnote reveal">And if none of those fit perfectly? You don't have to come with a category. Just come as you are.</p>
+</section>
 
-  <!-- ── CONTACT ───────────────────────────────────────────── -->
-  <section id="contact" aria-labelledby="contact-h">
-    <div class="wrap">
-      <div class="contact-box reveal">
-        <span class="eyebrow" style="color:var(--sun);">Let's start with hello</span>
-        <h2 id="contact-h">Some part of you is curious.<br>That's a good reason.</h2>
-        <p>The first step is small, I promise: a free, no-pressure consult where we just talk. You don't have to have the right words ready.</p>
-        <p style="font-weight:700;">You can reach me at <a href="mailto:molly@mollyschwartztherapy.com" style="color:var(--coral);">molly@mollyschwartztherapy.com</a> or book straight from the button below. I reply within 2 business days.</p>
-        <form class="cform" id="consultForm" action="https://formspree.io/f/[your-form-id]" method="POST">
-          <div class="row">
-            <div><label for="cf-name">Your name</label>
-              <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="First name is fine" required /></div>
-            <div><label for="cf-email">Email</label>
-              <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div>
-          </div>
-          <div><label for="cf-msg">What's bringing you in? (a sentence is plenty)</label>
-            <textarea id="cf-msg" name="message" rows="4" placeholder="No pressure at all."></textarea></div>
-          <input type="hidden" name="_subject" value="New consult request — Reflecting Therapy" />
-          <div class="cform-actions">
-            <button class="btn" type="submit">Send it my way</button>
-            <a class="btn btn--book" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Or book a time directly</a>
-          </div>
-          <p class="cform-status" id="cfStatus" role="status" aria-live="polite"></p>
-        </form>
-        <p class="crisis">If you're in crisis or it's an emergency, please don't wait on a form — call or text <a href="tel:988">988</a> (the Suicide &amp; Crisis Lifeline) or go to your nearest emergency room. I'm not able to provide emergency services, but those folks are there for you right now.</p>
+<!-- ── TORN PAPER DIVIDER → back to cream ───────────────── -->
+<svg class="torn into-cream" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,28 L44,42 L88,22 L136,44 L184,20 L232,40 L280,16 L328,38 L376,24 L424,46 L472,18 L520,40 L568,22 L616,44 L664,18 L712,40 L760,24 L808,46 L856,20 L904,42 L952,16 L1000,38 L1048,22 L1096,44 L1144,20 L1192,40 L1240,18 L1288,42 L1336,22 L1384,40 L1440,28 L1440,0 L0,0 Z"/>
+</svg>
+
+<!-- ── WORKING TOGETHER ────────────────────────────────── -->
+<section id="working" aria-labelledby="working-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Working together</span>
+      <h2 id="working-h">What it actually looks like.</h2>
+      <p style="max-width:52ch;font-weight:600;">The logistics, made human — because you deserve to know what you're walking into before you walk into it.</p>
+    </div>
+    <div class="working-grid">
+      <div class="working-item reveal">
+        <h3>Individual therapy</h3>
+        <p>One-on-one time that's entirely yours. Sometimes practical and skills-focused, sometimes deep and tender, often both. We follow what you actually need — no script.</p>
+        <p class="price">50 minutes · usually weekly to start</p>
+      </div>
+      <div class="working-item reveal">
+        <h3>Couples &amp; relationships</h3>
+        <p>Whether you're two people or a polycule, this is a place to be heard without it turning into a referee match. We'll slow the painful loops and rebuild the kind of communication that makes a relationship feel safe again.</p>
+        <p class="price">Available — reach out to discuss</p>
+      </div>
+      <div class="working-item working-full reveal">
+        <h3>The practical stuff</h3>
+        <p>I see clients by telehealth across Georgia and in person in Atlanta. I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is available — if cost is a barrier, reach out anyway and let's talk.</p>
+        <p style="font-weight:700;margin-bottom:0;">We begin with a free 15-minute consult — a low-stakes conversation to feel each other out. No commitment, no pressure.</p>
       </div>
     </div>
-  </section>
+    <div class="working-cta reveal">
+      <a class="btn" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Book a free consult</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────── -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="faq-head reveal">
+      <span class="eyebrow">Good questions</span>
+      <h2 id="faq-h">The things you're probably already wondering.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="q"><button aria-expanded="false"><span>How do I know if I even need therapy?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>You don't have to be in crisis to deserve support. If something's been sitting heavy, if you keep circling the same thing, or if you're just curious what it'd be like to have a person in your corner — that's reason enough. Therapy isn't only for emergencies. It's also for becoming more yourself.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>What's a consult, and what happens after?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>It's a free, casual 15-minute call where we talk about what's bringing you in and whether we're a good fit. If it feels right, we'll schedule a first session. If it doesn't, I'll happily point you toward someone who might be a better match. No pressure either way.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>I've never done therapy before. Is that weird?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>Not even a little. Lots of my clients are first-timers, and "I have no idea how this works" is a completely normal place to start. I'll walk you through everything. You don't have to be good at therapy to come to therapy.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>Is this really judgment-free for kink, nonmonogamy, and queer identities?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>Yes — genuinely, not as a buzzword. I won't pathologize your relationship structure, your identity, or your desires, and you won't have to teach me the basics to be understood. It's one of the main reasons people come to me, and I take it seriously.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>Do you work with more than two people in a relationship?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>I do. Relationships come in lots of shapes, and I'm glad to work with polycules and multi-partner configurations — together or individually, whatever serves the work best.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>Do you take insurance?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is also available. If cost is a worry, please reach out anyway — I'd rather problem-solve with you than have money quietly keep you away.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>How long will I be in therapy?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>There's no set answer, and anyone who promises one is guessing. Some people come for a specific season; others stay longer because they like the space. We'll check in regularly about what's working — you're always in the driver's seat.</p></div></div>
+      <div class="q"><button aria-expanded="false"><span>Where are you located?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="ans"><p>I see clients by telehealth across Georgia and in person in Atlanta.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ───────────────────────────────────────────── -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <span class="eyebrow" style="color:var(--sun);">Let's start with hello</span>
+      <h2 id="contact-h">Some part of you is curious.<br>That's a good reason.</h2>
+      <p>The first step is small, I promise: a free, no-pressure consult where we just talk. You don't have to have the right words ready.</p>
+      <p style="font-weight:700;">You can reach me at <a href="mailto:molly@mollyschwartztherapy.com" style="color:var(--coral);">molly@mollyschwartztherapy.com</a> or book straight from the button below. I reply within 2 business days.</p>
+      <form class="cform" id="consultForm" action="https://formspree.io/f/[your-form-id]" method="POST">
+        <div class="row">
+          <div><label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="First name is fine" required/></div>
+          <div><label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required/></div>
+        </div>
+        <div><label for="cf-msg">What's bringing you in? (a sentence is plenty)</label>
+          <textarea id="cf-msg" name="message" rows="4" placeholder="No pressure at all."></textarea></div>
+        <input type="hidden" name="_subject" value="New consult request — Reflecting Therapy"/>
+        <div class="cform-actions">
+          <button class="btn" type="submit">Send it my way</button>
+          <a class="btn btn--book" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Or book a time directly</a>
+        </div>
+        <p class="cform-status" id="cfStatus" role="status" aria-live="polite"></p>
+      </form>
+      <p class="crisis">If you're in crisis or it's an emergency, please don't wait on a form — call or text <a href="tel:988">988</a> (Suicide &amp; Crisis Lifeline) or go to your nearest emergency room. I'm not able to provide emergency services, but those folks are there for you right now.</p>
+    </div>
+  </div>
+</section>
 
 </main>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
   <div class="footer-brand">
-    <span class="disco" aria-hidden="true" style="width:32px;height:32px;animation-duration:8s;"></span>
     Reflecting Therapy
   </div>
   <p>Molly Schwartz, MA, NCC · Affirming individual &amp; couples therapy</p>
@@ -781,62 +770,62 @@ footer .fine { font-size: .76rem; opacity: .5; margin-top: 1.4rem; }
 </footer>
 
 <script>
-  // Reveal on scroll
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.body.classList.add('anim');
-    var io = new IntersectionObserver(function(es) {
-      es.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: .1 });
-    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
-  }
+// Reveal on scroll
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.body.classList.add('anim');
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+}
 
-  // Sticky nav border
-  var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 8); }, { passive: true });
+// Sticky nav
+var nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>8);},{passive:true});
 
-  // Mobile menu
-  var toggle = document.getElementById('navToggle');
-  var links  = document.getElementById('navLinks');
-  toggle.addEventListener('click', function() {
-    var open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+// Mobile menu
+var toggle=document.getElementById('navToggle');
+var links=document.getElementById('navLinks');
+toggle.addEventListener('click',function(){
+  var open=links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded',open);
+  toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+});
+links.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded',false);
   });
-  links.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
-    });
+});
+
+// FAQ accordion
+document.querySelectorAll('.q button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var open=btn.getAttribute('aria-expanded')==='true';
+    var ans=btn.nextElementSibling;
+    btn.setAttribute('aria-expanded',!open);
+    ans.style.maxHeight=open?null:ans.scrollHeight+'px';
   });
+});
 
-  // FAQ accordion
-  document.querySelectorAll('.q button').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      var ans  = btn.nextElementSibling;
-      btn.setAttribute('aria-expanded', !open);
-      ans.style.maxHeight = open ? null : ans.scrollHeight + 'px';
-    });
+// Contact form
+var cf=document.getElementById('consultForm');
+if(cf){
+  cf.addEventListener('submit',function(e){
+    if(cf.getAttribute('action').indexOf('[')>-1){return;}
+    e.preventDefault();
+    var s=document.getElementById('cfStatus');
+    s.textContent='sending…';
+    fetch(cf.getAttribute('action'),{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){cf.reset();s.textContent="got it — I'll be in touch within a couple business days ✦";}
+        else{s.textContent="hmm, that didn't go through — email me directly";}
+      })
+      .catch(function(){s.textContent="hmm, that didn't go through — email me directly";});
   });
+}
 
-  // Contact form
-  var cf = document.getElementById('consultForm');
-  if (cf) {
-    cf.addEventListener('submit', function(e) {
-      if (cf.getAttribute('action').indexOf('[') > -1) { return; }
-      e.preventDefault();
-      var s = document.getElementById('cfStatus');
-      s.textContent = 'sending…';
-      fetch(cf.getAttribute('action'), { method: 'POST', body: new FormData(cf), headers: { 'Accept': 'application/json' } })
-        .then(function(r) {
-          if (r.ok) { cf.reset(); s.textContent = "got it — I'll be in touch within a couple business days ✦"; }
-          else { s.textContent = "hmm, that didn't go through — email me directly"; }
-        })
-        .catch(function() { s.textContent = "hmm, that didn't go through — email me directly"; });
-    });
-  }
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
