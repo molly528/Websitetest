@@ -1,1099 +1,570 @@
 <!DOCTYPE html>
+<!--
+  ============================================================
+  SEO — page titles + meta descriptions (for if you split this
+  into separate pages later). The HOME set is live in <head>.
+  ------------------------------------------------------------
+  HOME
+   Title:  Molly Schwartz, MA, NCC — Reflecting Therapy | Atlanta Therapist
+   Desc:   Warm, affirming therapy in Atlanta for individuals & couples — eldest daughters, LGBTQIA+, nonmonogamous, and kink-aware clients. Book a free consult.
+  ABOUT
+   Title:  About Molly — Atlanta Therapist & Former Sex Educator
+   Desc:   Meet Molly, a laid-back, affirming Atlanta therapist (and former sex educator) for individuals and couples. Warm, judgment-free, deeply human care.
+  WHO I WORK WITH
+   Title:  Who I Work With — Eldest Daughters, LGBTQIA+, Poly & Kink-Affirming Therapy in Atlanta
+   Desc:   Affirming Atlanta therapy for eldest daughters, queer and trans folks, nonmonogamous and polyamorous clients, the kink community, and sexuality exploration.
+  WORKING TOGETHER
+   Title:  Working Together — Individual & Couples Therapy in Atlanta
+   Desc:   How therapy with Molly works — individual and relationship therapy in Atlanta (and telehealth across Georgia), fees, and a free consult to start.
+  FAQ
+   Title:  FAQ — Atlanta Therapy with Molly
+   Desc:   Common questions about starting therapy with Molly — consults, insurance, affirming care for queer, poly, and kink clients, and what to expect.
+  CONTACT
+   Title:  Contact & Free Consult — Molly, Atlanta Therapist
+   Desc:   Ready to start? Book a free, no-pressure consult with Molly, an affirming individual & couples therapist in Atlanta and across Georgia.
+  ------------------------------------------------------------
+  TO DO before publishing: replace every [bracketed] placeholder,
+  add your photos (search "REPLACE" / "[ "), set your real links.
+  ============================================================
+-->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molly Schwartz Therapy — Atlanta, GA</title>
-  <meta name="description" content="Individual therapy in Atlanta, GA specializing in relationships, intimacy, identity, self-esteem, anxiety, and LGBTQIA+ issues. Molly Schwartz, MA, NCC, LPC.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Inline SVG favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%233A2A3F'/><circle cx='16' cy='16' r='8' fill='%23FF9DC6'/></svg>">
-
-  <style>
-    /* ─── PALETTE ─────────────────────────────────────────── */
-    :root {
-      --cream:      #FAF7F2;
-      --plum:       #3A2A3F;
-      --bubblegum:  #FF9DC6;
-      --periwinkle: #80B0E8;
-      --teal:       #008471;
-      --lavender:   #D1CAEA;
-      --sun:        #F4D242;
-
-      --font-display: 'Fraunces', Georgia, serif;
-      --font-body:    'Hanken Grotesk', 'Helvetica Neue', sans-serif;
-
-      /* Fluid type */
-      --text-xs:   clamp(0.70rem, 0.66rem + 0.18vw, 0.80rem);
-      --text-sm:   clamp(0.83rem, 0.78rem + 0.29vw, 1.00rem);
-      --text-base: clamp(1.00rem, 0.91rem + 0.43vw, 1.25rem);
-      --text-lg:   clamp(1.20rem, 1.07rem + 0.63vw, 1.56rem);
-      --text-xl:   clamp(1.44rem, 1.26rem + 0.89vw, 1.95rem);
-      --text-2xl:  clamp(1.73rem, 1.48rem + 1.24vw, 2.44rem);
-      --text-3xl:  clamp(2.07rem, 1.73rem + 1.70vw, 3.05rem);
-      --text-4xl:  clamp(2.49rem, 2.03rem + 2.31vw, 3.82rem);
-      --text-5xl:  clamp(3.18rem, 2.50rem + 3.50vw, 5.20rem);
-
-      /* Spacing */
-      --space-xs:  clamp(0.75rem, 0.68rem + 0.33vw, 0.94rem);
-      --space-s:   clamp(1.00rem, 0.91rem + 0.43vw, 1.25rem);
-      --space-m:   clamp(1.50rem, 1.37rem + 0.65vw, 1.88rem);
-      --space-l:   clamp(2.00rem, 1.83rem + 0.87vw, 2.50rem);
-      --space-xl:  clamp(3.00rem, 2.74rem + 1.30vw, 3.75rem);
-      --space-2xl: clamp(4.00rem, 3.65rem + 1.74vw, 5.00rem);
-      --space-3xl: clamp(6.00rem, 5.48rem + 2.61vw, 7.50rem);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    body {
-      background: var(--cream);
-      color: var(--plum);
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    ::selection {
-      background: var(--bubblegum);
-      color: var(--plum);
-    }
-
-    /* ─── NAV ─────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 200;
-      padding: var(--space-s) var(--space-l);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: rgba(250, 247, 242, 0.82);
-      border-bottom: 1px solid rgba(58, 42, 63, 0.07);
-      transition: background 0.3s ease;
-    }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: var(--text-lg);
-      font-weight: 600;
-      font-style: italic;
-      color: var(--plum);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: var(--space-l);
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--plum);
-      text-decoration: none;
-      font-size: var(--text-sm);
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 1.5px;
-      background: var(--bubblegum);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.32s ease;
-    }
-
-    @media (hover: hover) {
-      .nav-links a:not(.nav-cta):hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-
-    .nav-cta {
-      background: var(--plum) !important;
-      color: var(--cream) !important;
-      padding: 0.55em 1.4em !important;
-      border-radius: 3em;
-      font-weight: 500 !important;
-      transition: background 0.25s ease, transform 0.2s ease !important;
-      display: inline-block;
-    }
-
-    .nav-cta::after { display: none !important; }
-
-    @media (hover: hover) {
-      .nav-cta:hover {
-        background: var(--teal) !important;
-        transform: translateY(-1px);
-      }
-    }
-
-    /* ─── HERO ────────────────────────────────────────────── */
-    #home {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 55fr 45fr;
-      padding-top: 4.5rem;
-    }
-
-    .hero-content {
-      padding: var(--space-3xl) var(--space-xl) var(--space-3xl) var(--space-2xl);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-eyebrow {
-      font-size: var(--text-xs);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-m);
-      display: flex;
-      align-items: center;
-      gap: 0.75em;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 2.5em;
-      height: 1.5px;
-      background: var(--teal);
-      flex-shrink: 0;
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: var(--text-5xl);
-      font-weight: 800;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      color: var(--plum);
-      text-wrap: balance;
-      margin-bottom: var(--space-l);
-    }
-
-    .hero-title em {
-      font-style: italic;
-      font-weight: 700;
-      color: var(--teal);
-    }
-
-    .hero-sub {
-      font-size: var(--text-lg);
-      font-weight: 300;
-      line-height: 1.65;
-      color: var(--plum);
-      opacity: 0.78;
-      max-width: 36rem;
-      margin-bottom: var(--space-xl);
-      text-wrap: pretty;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: var(--space-m);
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--plum);
-      color: var(--cream);
-      padding: 0.9em 2.2em;
-      border-radius: 3em;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: var(--text-base);
-      letter-spacing: 0.01em;
-      display: inline-block;
-      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    @media (hover: hover) {
-      .btn-primary:hover {
-        background: var(--teal);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(0, 132, 113, 0.28);
-      }
-    }
-
-    .btn-ghost {
-      color: var(--plum);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: var(--text-base);
-      border-bottom: 2px solid var(--bubblegum);
-      padding-bottom: 1px;
-      transition: color 0.2s ease, border-color 0.2s ease;
-    }
-
-    @media (hover: hover) {
-      .btn-ghost:hover {
-        color: var(--teal);
-        border-color: var(--teal);
-      }
-    }
-
-    .hero-visual {
-      position: relative;
-      background: var(--lavender);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      min-height: 60vh;
-    }
-
-    .hero-blob {
-      position: absolute;
-      width: 75%;
-      height: 65%;
-      background: var(--bubblegum);
-      opacity: 0.55;
-      border-radius: 60% 40% 50% 50% / 55% 45% 55% 45%;
-      animation: blobmorph 10s ease-in-out infinite;
-      pointer-events: none;
-    }
-
-    @keyframes blobmorph {
-      0%, 100% { border-radius: 60% 40% 50% 50% / 55% 45% 55% 45%; transform: translate(-5%, 0); }
-      33%       { border-radius: 40% 60% 55% 45% / 45% 55% 45% 55%; transform: translate(5%, -5%); }
-      66%       { border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%; transform: translate(0, 5%); }
-    }
-
-    .hero-sun {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      width: clamp(60px, 10vw, 100px);
-      height: clamp(60px, 10vw, 100px);
-      background: var(--sun);
-      border-radius: 50%;
-    }
-
-    .hero-visual-text {
-      position: relative;
-      z-index: 2;
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: var(--text-3xl);
-      font-weight: 700;
-      color: var(--plum);
-      text-align: center;
-      line-height: 1.15;
-      padding: var(--space-l);
-      text-wrap: balance;
-    }
-
-    /* ─── ABOUT ───────────────────────────────────────────── */
-    #about {
-      background: var(--plum);
-      color: var(--cream);
-      padding: var(--space-3xl) var(--space-2xl);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-3xl);
-      align-items: center;
-    }
-
-    .section-label {
-      font-size: var(--text-xs);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 0.75em;
-      margin-bottom: var(--space-m);
-    }
-
-    .section-label::before {
-      content: '';
-      display: inline-block;
-      width: 2.5em;
-      height: 1.5px;
-      background: currentColor;
-      flex-shrink: 0;
-    }
-
-    .section-label--pink  { color: var(--bubblegum); }
-    .section-label--teal  { color: var(--teal); }
-    .section-label--sun   { color: var(--sun); }
-
-    .about-title {
-      font-family: var(--font-display);
-      font-size: var(--text-4xl);
-      font-weight: 800;
-      line-height: 1.03;
-      letter-spacing: -0.025em;
-      text-wrap: balance;
-      margin-bottom: var(--space-l);
-    }
-
-    .about-title em {
-      font-style: italic;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 1.5px var(--bubblegum);
-    }
-
-    .about-body {
-      font-size: var(--text-lg);
-      font-weight: 300;
-      line-height: 1.72;
-      opacity: 0.82;
-    }
-
-    .about-body p + p { margin-top: var(--space-m); }
-    .about-body em { font-style: italic; opacity: 1; }
-
-    .about-credentials {
-      margin-top: var(--space-xl);
-      padding: var(--space-l);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .about-credentials strong {
-      display: block;
-      font-size: var(--text-base);
-      font-weight: 600;
-      margin-bottom: var(--space-xs);
-      color: var(--bubblegum);
-    }
-
-    .about-credentials p {
-      font-size: var(--text-sm);
-      opacity: 0.6;
-      line-height: 1.8;
-    }
-
-    .about-visual {
-      position: relative;
-    }
-
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      background: var(--lavender);
-      border-radius: clamp(1rem, 2vw, 1.5rem);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .about-photo::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 40% 60%, var(--periwinkle) 0%, transparent 65%);
-      opacity: 0.5;
-    }
-
-    .about-photo span {
-      position: relative;
-      z-index: 1;
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: var(--text-base);
-      color: var(--plum);
-      opacity: 0.5;
-    }
-
-    .about-badge {
-      position: absolute;
-      bottom: -1.25rem;
-      right: -1rem;
-      background: var(--sun);
-      color: var(--plum);
-      padding: var(--space-m) var(--space-l);
-      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
-      font-weight: 700;
-      font-size: var(--text-sm);
-      line-height: 1.45;
-      text-align: center;
-      box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
-    }
-
-    /* ─── SERVICES ────────────────────────────────────────── */
-    #services {
-      padding: var(--space-3xl) var(--space-2xl);
-      background: var(--cream);
-    }
-
-    .services-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: var(--space-2xl);
-      gap: var(--space-l);
-    }
-
-    .services-title {
-      font-family: var(--font-display);
-      font-size: var(--text-4xl);
-      font-weight: 800;
-      line-height: 1.03;
-      letter-spacing: -0.025em;
-      text-wrap: balance;
-    }
-
-    .services-sub {
-      max-width: 22rem;
-      font-size: var(--text-base);
-      font-weight: 300;
-      line-height: 1.65;
-      opacity: 0.65;
-      flex-shrink: 0;
-      text-wrap: pretty;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
-      gap: var(--space-m);
-    }
-
-    /* Last two cards span wider */
-    .service-card:nth-child(4) { grid-column: span 1; }
-    .service-card:nth-child(5) { grid-column: span 2; }
-
-    .service-card {
-      padding: var(--space-xl) var(--space-l);
-      border-radius: clamp(1rem, 2vw, 1.5rem);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-m);
-      min-height: 260px;
-      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
-                  box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    @media (hover: hover) {
-      .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 1.5rem 3.5rem rgba(58, 42, 63, 0.12);
-      }
-    }
-
-    .service-card:nth-child(1) { background: var(--bubblegum); }
-    .service-card:nth-child(2) { background: var(--periwinkle); }
-    .service-card:nth-child(3) { background: var(--teal); color: var(--cream); }
-    .service-card:nth-child(4) { background: var(--lavender); }
-    .service-card:nth-child(5) { background: var(--sun); }
-
-    .service-num {
-      font-family: var(--font-display);
-      font-size: var(--text-2xl);
-      font-weight: 800;
-      opacity: 0.2;
-      line-height: 1;
-      font-style: italic;
-    }
-
-    .service-name {
-      font-family: var(--font-display);
-      font-size: var(--text-xl);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-    }
-
-    .service-desc {
-      font-size: var(--text-sm);
-      line-height: 1.65;
-      opacity: 0.78;
-      margin-top: auto;
-      font-weight: 400;
-      text-wrap: pretty;
-    }
-
-    /* ─── MANIFESTO ───────────────────────────────────────── */
-    #approach {
-      background: var(--bubblegum);
-      padding: var(--space-3xl) var(--space-2xl);
-    }
-
-    .manifesto {
-      max-width: 50rem;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .manifesto-label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75em;
-      font-size: var(--text-xs);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xl);
-    }
-
-    .manifesto-label::before,
-    .manifesto-label::after {
-      content: '';
-      display: inline-block;
-      width: 2.5em;
-      height: 1.5px;
-      background: var(--teal);
-    }
-
-    .manifesto-quote {
-      font-family: var(--font-display);
-      font-size: var(--text-3xl);
-      font-weight: 700;
-      font-style: italic;
-      line-height: 1.22;
-      letter-spacing: -0.015em;
-      color: var(--plum);
-      text-wrap: balance;
-      margin-bottom: var(--space-xl);
-    }
-
-    .manifesto-body {
-      font-size: var(--text-lg);
-      font-weight: 300;
-      line-height: 1.72;
-      opacity: 0.78;
-      max-width: 42rem;
-      margin: 0 auto;
-      text-wrap: pretty;
-    }
-
-    /* ─── FEES ────────────────────────────────────────────── */
-    #fees {
-      background: var(--lavender);
-      padding: var(--space-3xl) var(--space-2xl);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-3xl);
-      align-items: start;
-    }
-
-    .fees-title {
-      font-family: var(--font-display);
-      font-size: var(--text-4xl);
-      font-weight: 800;
-      line-height: 1.03;
-      letter-spacing: -0.025em;
-      text-wrap: balance;
-      margin-bottom: var(--space-l);
-    }
-
-    .fees-body {
-      font-size: var(--text-lg);
-      font-weight: 300;
-      line-height: 1.72;
-      opacity: 0.82;
-      text-wrap: pretty;
-    }
-
-    .fees-items {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-s);
-    }
-
-    .fees-item {
-      background: rgba(255, 255, 255, 0.65);
-      border: 1px solid rgba(58, 42, 63, 0.07);
-      border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
-      padding: var(--space-l);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--space-m);
-      transition: background 0.25s ease, transform 0.25s ease;
-    }
-
-    @media (hover: hover) {
-      .fees-item:hover {
-        background: rgba(255, 255, 255, 0.9);
-        transform: translateX(4px);
-      }
-    }
-
-    .fees-item-label {
-      font-weight: 500;
-      font-size: var(--text-base);
-    }
-
-    .fees-item-value {
-      font-family: var(--font-display);
-      font-size: var(--text-xl);
-      font-weight: 700;
-      color: var(--teal);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    /* ─── CONTACT ─────────────────────────────────────────── */
-    #contact {
-      background: var(--plum);
-      color: var(--cream);
-      padding: var(--space-3xl) var(--space-2xl);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .contact-inner {
-      max-width: 38rem;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact-title {
-      font-family: var(--font-display);
-      font-size: var(--text-5xl);
-      font-weight: 800;
-      font-style: italic;
-      line-height: 1.0;
-      letter-spacing: -0.03em;
-      text-wrap: balance;
-      margin-bottom: var(--space-m);
-      margin-top: var(--space-m);
-    }
-
-    .contact-sub {
-      font-size: var(--text-lg);
-      font-weight: 300;
-      opacity: 0.72;
-      line-height: 1.65;
-      margin-bottom: var(--space-2xl);
-      text-wrap: pretty;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-m);
-      text-align: left;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-m);
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45em;
-    }
-
-    .form-group label {
-      font-size: var(--text-sm);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      opacity: 0.65;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 0.6em;
-      padding: 0.85em 1em;
-      color: var(--cream);
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      width: 100%;
-      transition: border-color 0.22s ease, background 0.22s ease;
-      outline: none;
-      appearance: none;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(250, 247, 242, 0.3); }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--bubblegum);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .form-group textarea {
-      min-height: 110px;
-      resize: vertical;
-      line-height: 1.55;
-    }
-
-    .form-group select { cursor: pointer; }
-    .form-group select option { background: var(--plum); color: var(--cream); }
-
-    .btn-submit {
-      background: var(--bubblegum);
-      color: var(--plum);
-      border: none;
-      padding: 1em 2.5em;
-      border-radius: 3em;
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      margin-top: var(--space-xs);
-      letter-spacing: 0.01em;
-    }
-
-    @media (hover: hover) {
-      .btn-submit:hover {
-        background: var(--sun);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(244, 210, 66, 0.28);
-      }
-    }
-
-    .btn-submit:disabled {
-      cursor: default;
-      background: var(--teal);
-      color: var(--cream);
-    }
-
-    .contact-details {
-      margin-top: var(--space-2xl);
-      padding-top: var(--space-xl);
-      border-top: 1px solid rgba(255, 255, 255, 0.09);
-      display: flex;
-      gap: var(--space-l);
-      justify-content: center;
-      flex-wrap: wrap;
-      font-size: var(--text-sm);
-      opacity: 0.55;
-    }
-
-    /* ─── FOOTER ──────────────────────────────────────────── */
-    footer {
-      background: var(--plum);
-      color: var(--cream);
-      padding: var(--space-l) var(--space-2xl);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
-      font-size: var(--text-sm);
-      opacity: 0.55;
-      flex-wrap: wrap;
-      gap: var(--space-m);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ─── SCROLL REVEAL ───────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(1.25rem);
-      transition: opacity 0.85s cubic-bezier(0.23, 1, 0.32, 1),
-                  transform 0.85s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .reveal-d1 { transition-delay: 0.08s; }
-    .reveal-d2 { transition-delay: 0.16s; }
-    .reveal-d3 { transition-delay: 0.24s; }
-    .reveal-d4 { transition-delay: 0.32s; }
-
-    /* ─── RESPONSIVE ──────────────────────────────────────── */
-    @media (max-width: 960px) {
-      #home { grid-template-columns: 1fr; }
-      .hero-visual { min-height: 45vh; }
-      #about { grid-template-columns: 1fr; }
-      .about-photo { max-width: 360px; margin: 0 auto; }
-      .services-header { flex-direction: column; align-items: flex-start; }
-      #fees { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 700px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .service-card:nth-child(4),
-      .service-card:nth-child(5) { grid-column: span 1; }
-      .form-row { grid-template-columns: 1fr; }
-      .nav-links { gap: var(--space-m); }
-    }
-
-    @media (max-width: 520px) {
-      .nav-links li:not(:last-child) { display: none; }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="images/favicon-512.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon-180.png" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<title>Molly Schwartz, MA, NCC — Reflecting Therapy | Atlanta Therapist | Eldest Daughters, Queer, Poly &amp; Kink-Affirming</title>
+<meta name="description" content="Warm, affirming therapy in Atlanta for individuals & couples — eldest daughters, LGBTQIA+, nonmonogamous, and kink-aware clients. Book a free consult." />
+<meta property="og:title" content="Molly Schwartz — Reflecting Therapy | Affirming Atlanta Therapist" />
+<meta property="og:description" content="Warm, colorful, judgment-free therapy in Atlanta for individuals & couples. Book a free consult." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="[link-to-a-share-image.jpg]" />
+<meta name="theme-color" content="#FF9DC6" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness","ProfessionalService"],
+  "name": "Reflecting Therapy — Molly Schwartz, MA, NCC",
+  "description": "Affirming individual and couples therapy in Atlanta for eldest daughters, LGBTQIA+, nonmonogamous, and kink-aware clients.",
+  "areaServed": [{"@type":"City","name":"Atlanta"},{"@type":"State","name":"Georgia"}],
+  "address": {"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},
+  "url": "https://mollyschwartztherapy.com",
+  "email": "molly@mollyschwartztherapy.com",
+  "knowsAbout": ["eldest daughter burnout","LGBTQIA+ affirming therapy","polyamory","nonmonogamy","kink-aware therapy","sexuality","couples therapy"],
+  "priceRange": "$$"
+}
+</script>
+<style>
+  :root{
+    --cream:#FAF7F2; --paper:#FFFDF9; --ink:#3A2A3F; --ink-soft:#6A5A6E;
+    --coral:#FF9DC6; --coral-tint:#FFE8F3; --teal:#008471; --teal-tint:#DFF2EB;
+    --marigold:#F4D242; --marigold-tint:#FBF3CC; --lilac:#80B0E8; --lilac-tint:#E4EEFA;
+    --pink:#D1CAEA; --pink-tint:#F0EDF8; --green:#5FA85B; --green-tint:#E3F1DB;
+    --ring:#008471;
+    --maxw:1120px; --r:22px; --r-sm:14px;
+    --shadow:0 18px 40px -24px rgba(58,42,63,.45);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Nunito",system-ui,sans-serif;font-size:18px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.08;
+    margin:0 0 .4em;letter-spacing:-.01em}
+  h1{font-size:clamp(2.5rem,7vw,4.6rem)}
+  h2{font-size:clamp(2rem,4.5vw,3rem)}
+  h3{font-size:1.4rem}
+  p{margin:0 0 1.1em}
+  a{color:inherit}
+  section{scroll-margin-top:92px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:"Nunito";font-weight:800;text-transform:uppercase;
+    letter-spacing:.14em;font-size:.78rem;color:var(--coral);margin:0 0 .9rem}
+  .btn{display:inline-block;font-family:"Nunito";font-weight:800;font-size:1rem;
+    text-decoration:none;padding:15px 26px;border-radius:999px;border:2.5px solid var(--ink);
+    background:var(--coral);color:var(--ink);cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:6px 6px 0 var(--ink)}
+  .btn--ghost{background:transparent}
+  .btn--ghost:hover{background:var(--marigold)}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--ring);
+    outline-offset:3px;border-radius:8px}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);
+    background:rgba(255,248,239,.82);border-bottom:2px solid transparent;transition:border-color .2s}
+  header.nav.scrolled{border-color:rgba(58,42,63,.12)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px}
+  .brand{font-family:"Fraunces";font-weight:600;font-size:1.45rem;text-decoration:none;
+    display:flex;align-items:center;gap:10px}
+  .brand .dot{width:16px;height:16px;border-radius:50%;background:var(--teal);
+    box-shadow:10px 0 0 -3px var(--marigold),20px 0 0 -6px var(--lilac)}
+  .links{display:flex;align-items:center;gap:26px}
+  .links a{font-family:"Nunito";font-weight:700;font-size:1rem;text-decoration:none;
+    color:var(--ink);opacity:.85}
+  .links a:hover{opacity:1;color:var(--coral)}
+  .nav-toggle{display:none;background:none;border:2.5px solid var(--ink);border-radius:12px;
+    padding:7px 10px;font-size:1.1rem;cursor:pointer;font-family:"Nunito";font-weight:800}
+
+  /* hero */
+  .hero{position:relative;padding:78px 0 70px;overflow:hidden}
+  .hero h1{max-width:14ch}
+  .hero p.lede{font-size:clamp(1.1rem,2.4vw,1.45rem);max-width:34ch;color:var(--ink-soft);
+    font-weight:600;margin-bottom:1.6em}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;z-index:-1}
+  .b1{width:340px;height:340px;background:var(--marigold);top:-70px;right:-40px;animation:float1 14s ease-in-out infinite}
+  .b2{width:220px;height:220px;background:var(--teal);bottom:-30px;right:120px;opacity:.4;animation:float2 18s ease-in-out infinite}
+  .b3{width:160px;height:160px;background:var(--lilac);top:120px;right:330px;opacity:.4;animation:float1 16s ease-in-out infinite reverse}
+  @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,18px)}}
+  .sticker{display:inline-block;font-family:"Nunito";font-weight:800;font-size:.85rem;
+    background:var(--paper);border:2.5px solid var(--ink);border-radius:999px;
+    padding:7px 16px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--ink);margin-bottom:22px}
+
+  /* generic section */
+  .sec{padding:74px 0}
+  .sec--tint{background:var(--paper)}
+  .lead-2{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+
+  /* about photo frame */
+  .polaroid{background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--r-sm);
+    padding:14px 14px 56px;transform:rotate(2deg);box-shadow:var(--shadow);position:relative}
+  .polaroid .ph{aspect-ratio:4/5;border-radius:8px;display:flex;align-items:center;
+    justify-content:center;text-align:center;padding:20px;font-weight:700;color:var(--ink);
+    background:repeating-linear-gradient(45deg,var(--marigold-tint),var(--marigold-tint) 18px,var(--coral-tint) 18px,var(--coral-tint) 36px)}
+  .polaroid .cap{position:absolute;bottom:16px;left:0;right:0;text-align:center;
+    font-family:"Fraunces";font-style:italic;font-size:1.1rem}
+
+  /* niche cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-top:18px}
+  .card{border:2.5px solid var(--ink);border-radius:var(--r);padding:26px 24px;
+    box-shadow:5px 5px 0 var(--ink);transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:8px 10px 0 var(--ink)}
+  .card h3{font-size:1.3rem;margin-bottom:.35em}
+  .card p{font-size:1rem;margin:0;color:var(--ink)}
+  .card .tag{font-family:"Nunito";font-weight:800;font-size:.72rem;text-transform:uppercase;
+    letter-spacing:.12em;display:inline-block;margin-bottom:12px;padding:4px 11px;border-radius:999px;
+    background:var(--paper);border:2px solid var(--ink)}
+  .c-coral{background:var(--coral-tint)} .c-teal{background:var(--teal-tint)}
+  .c-marigold{background:var(--marigold-tint)} .c-lilac{background:var(--lilac-tint)}
+  .c-pink{background:var(--pink-tint)} .c-green{background:var(--green-tint)}
+  .endnote{margin-top:26px;font-family:"Fraunces";font-style:italic;font-size:1.3rem;max-width:40ch}
+
+  /* working together */
+  .stack{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:14px}
+  .panel{background:var(--cream);border:2.5px solid var(--ink);border-radius:var(--r);padding:28px}
+  .panel.full{grid-column:1/-1}
+  .panel h3{color:var(--ink)}
+  .panel .price{font-family:"Fraunces";font-weight:600;font-size:1.05rem;color:var(--teal)}
+
+  /* faq */
+  .faq{max-width:760px;margin:14px auto 0}
+  .q{border-bottom:2px solid rgba(58,42,63,.14)}
+  .q button{width:100%;text-align:left;background:none;border:none;cursor:pointer;
+    font-family:"Fraunces";font-weight:600;font-size:1.18rem;color:var(--ink);
+    padding:22px 44px 22px 4px;position:relative;line-height:1.25}
+  .q button .plus{position:absolute;right:6px;top:50%;transform:translateY(-50%);
+    font-family:"Nunito";font-weight:800;font-size:1.5rem;color:var(--coral);transition:transform .2s}
+  .q button[aria-expanded="true"] .plus{transform:translateY(-50%) rotate(45deg)}
+  .q .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .q .a p{padding:0 4px 22px;margin:0;color:var(--ink-soft);font-weight:600}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--cream);border-radius:36px;padding:64px 40px;
+    text-align:center;position:relative;overflow:hidden}
+  .contact h2{color:var(--cream)}
+  .contact p{color:#E9DEEC;max-width:50ch;margin-left:auto;margin-right:auto}
+  .contact .btn{background:var(--marigold);border-color:var(--cream)}
+  .contact .btn:hover{box-shadow:6px 6px 0 var(--coral);background:var(--coral)}
+  .contact .blob{opacity:.5}
+  .cform{max-width:560px;margin:22px auto 0;text-align:left;display:grid;gap:14px}
+  .cform label{font-family:"Nunito";font-weight:800;font-size:.9rem;color:var(--cream);display:block;margin-bottom:6px}
+  .cform input,.cform textarea{width:100%;font-family:"Nunito";font-size:1rem;padding:13px 15px;
+    border-radius:14px;border:2.5px solid var(--cream);background:var(--paper);color:var(--ink)}
+  .cform input:focus-visible,.cform textarea:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+  .cform textarea{min-height:120px;resize:vertical}
+  .cform .hp{position:absolute;left:-9999px}
+  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.cform .row{grid-template-columns:1fr}}
+  .formnote{font-size:.85rem;color:#E9DEEC;margin:2px 0 0;line-height:1.5}
+  .crisis{margin:26px auto 0;max-width:60ch;font-size:.95rem;background:rgba(255,255,255,.08);
+    border:1.5px solid rgba(255,255,255,.25);border-radius:16px;padding:16px 20px;color:#F3ECF4}
+  .crisis a{color:var(--marigold);font-weight:800}
+  .cform{max-width:520px;margin:22px auto 0;text-align:left}
+  .cform .field{margin-bottom:14px}
+  .cform label{display:block;font-family:"Nunito";font-weight:800;font-size:.92rem;margin-bottom:6px;color:var(--cream)}
+  .cform input,.cform textarea{width:100%;font-family:"Nunito";font-size:1rem;padding:12px 14px;
+    border-radius:12px;border:2px solid rgba(255,255,255,.4);background:rgba(255,255,255,.96);color:var(--ink)}
+  .cform input:focus,.cform textarea:focus{outline:3px solid var(--marigold);outline-offset:2px;border-color:transparent}
+  .cform-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+  .btn--book{background:transparent;color:var(--cream);border-color:var(--cream)}
+  .btn--book:hover{background:var(--teal);box-shadow:6px 6px 0 var(--coral)}
+  .cform-status{margin-top:14px;text-align:center;font-weight:800;color:var(--marigold);min-height:1.2em}
+
+  footer{padding:46px 24px 60px;text-align:center;color:var(--ink-soft);font-size:.92rem}
+  footer .brand{justify-content:center;color:var(--ink);margin-bottom:10px;font-size:1.3rem}
+
+  .reveal{opacity:1}
+  .anim .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .anim .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:860px){
+    .links{position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;
+      background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 0 16px;
+      transform:translateY(-130%);transition:transform .28s ease;align-items:stretch}
+    .links.open{transform:translateY(0)}
+    .links a{padding:14px 28px;border-top:1px solid rgba(58,42,63,.1)}
+    .links .btn{margin:12px 28px 0;text-align:center}
+    .nav-toggle{display:block}
+    .lead-2,.stack{grid-template-columns:1fr;gap:34px}
+    .polaroid{transform:none;max-width:380px;margin:0 auto}
+    .contact{padding:48px 22px;border-radius:26px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .blob{animation:none!important}
+    .anim .reveal{opacity:1;transform:none;transition:none}
+    .btn,.card{transition:none}
+  }
+</style>
 </head>
 <body>
 
-  <!-- ── NAV ────────────────────────────────────────────────── -->
-  <nav aria-label="Main navigation">
-    <a href="#home" class="nav-logo">Molly Schwartz</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#fees">Fees</a></li>
-      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-    </ul>
-  </nav>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top"><img src="images/wordmark-ma-ncc.png" alt="molly schwartz, MA, NCC — Reflecting Therapy" style="height:44px;width:auto;display:block"></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">menu</button>
+    <nav class="links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#who">Who I Work With</a>
+      <a href="#working">Working Together</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#contact">Book a free consult</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ── HERO ───────────────────────────────────────────────── -->
-  <section id="home" aria-label="Hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Therapy in Atlanta, GA</p>
-      <h1 class="hero-title">
-        Let's talk about<br>
-        the stuff you<br>
-        <em>actually</em> think about.
-      </h1>
-      <p class="hero-sub">
-        Individual therapy for relationships, identity, intimacy, and all the messy, beautiful parts of being human. No judgment — just real conversation.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Book a Free Consult</a>
-        <a href="#about" class="btn-ghost">About Molly</a>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-blob"></div>
-      <div class="hero-sun"></div>
-      <p class="hero-visual-text">You're not<br>too much.</p>
-    </div>
-  </section>
+<main id="top">
 
-  <!-- ── ABOUT ──────────────────────────────────────────────── -->
-  <section id="about" aria-label="About Molly">
-    <div>
-      <p class="section-label section-label--pink">About</p>
-      <h2 class="about-title">
-        Therapy that<br>
-        meets you <em>here.</em>
-      </h2>
-      <div class="about-body">
-        <p>
-          Hi, I'm Molly. I'm a licensed therapist in Atlanta, and I specialize in the kinds of conversations that feel too complicated — or too vulnerable — to have anywhere else.
-        </p>
-        <p>
-          Whether you're untangling your sense of self, figuring out who you are in relationships, exploring your identity, or just trying to feel less anxious about being alive — you don't have to do it alone.
-        </p>
-        <p>
-          My approach is warm, direct, and genuinely collaborative. I'm not here to hand you a worksheet. I'm here to actually <em>think</em> with you.
-        </p>
-      </div>
-      <div class="about-credentials">
-        <strong>Molly Schwartz, MA, NCC, LPC</strong>
-        <p>Licensed Professional Counselor</p>
-        <p>National Certified Counselor</p>
-        <p>Atlanta, Georgia</p>
-      </div>
-    </div>
-    <div class="about-visual">
-      <div class="about-photo">
-        <span>your photo here</span>
-      </div>
-      <div class="about-badge">
-        LGBTQIA+<br>Affirming<br>Practice ✦
+  <section class="hero" aria-labelledby="hero-h">
+    <span class="blob b1" aria-hidden="true"></span>
+    <span class="blob b2" aria-hidden="true"></span>
+    <span class="blob b3" aria-hidden="true"></span>
+    <div class="wrap">
+      <img src="images/reflecting-therapy-logo-mark.png" alt="" aria-hidden="true" style="height:150px;width:auto;display:block;margin-bottom:18px">
+      <span class="sticker">take your shoes off, stay a while</span>
+      <h1 id="hero-h">You don't have to be the strong one in here.</h1>
+      <p class="lede">Warm, colorful, deeply un-shockable therapy in Atlanta — for individuals and couples figuring out the hard, human stuff.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Book a free consult</a>
+        <a class="btn btn--ghost" href="#about">A little about me</a>
       </div>
     </div>
   </section>
 
-  <!-- ── SERVICES ───────────────────────────────────────────── -->
-  <section id="services" aria-label="Services">
-    <div class="services-header">
-      <div>
-        <p class="section-label section-label--teal reveal">Specialties</p>
-        <h2 class="services-title reveal reveal-d1">What we can<br>work on together.</h2>
-      </div>
-      <p class="services-sub reveal reveal-d2">
-        Each of these areas overlaps — because you're a whole person, not a diagnosis. We'll figure out what fits.
-      </p>
-    </div>
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <span class="service-num" aria-hidden="true">01</span>
-        <h3 class="service-name">Relationship &amp; Intimacy Dynamics</h3>
-        <p class="service-desc">Patterns in how we connect — and disconnect — with the people we love. Attachment, conflict, communication, desire.</p>
-      </article>
-      <article class="service-card reveal reveal-d1">
-        <span class="service-num" aria-hidden="true">02</span>
-        <h3 class="service-name">Sexuality &amp; Identity Exploration</h3>
-        <p class="service-desc">A space to question, discover, and name your experience — on your own terms, without a timeline.</p>
-      </article>
-      <article class="service-card reveal reveal-d2">
-        <span class="service-num" aria-hidden="true">03</span>
-        <h3 class="service-name">Self-Esteem &amp; Self-Worth</h3>
-        <p class="service-desc">The inner critic is loud. We'll work on turning down the volume and building a relationship with yourself that actually feels good.</p>
-      </article>
-      <article class="service-card reveal reveal-d1">
-        <span class="service-num" aria-hidden="true">04</span>
-        <h3 class="service-name">Anxiety</h3>
-        <p class="service-desc">Whether it's constant worry, social anxiety, or the unnamed dread that shows up uninvited — you don't have to white-knuckle it alone.</p>
-      </article>
-      <article class="service-card reveal reveal-d2">
-        <span class="service-num" aria-hidden="true">05</span>
-        <h3 class="service-name">LGBTQIA+ Issues</h3>
-        <p class="service-desc">Affirming, knowledgeable support for queer and trans folks navigating identity, coming out, family, community, and everything in between.</p>
-      </article>
+  <section class="sec" id="welcome" aria-label="Welcome">
+    <div class="wrap reveal">
+      <p style="font-size:clamp(1.25rem,3vw,1.7rem);font-family:'Fraunces';max-width:24ch;line-height:1.25;">
+        Hi, I'm Molly.</p>
+      <p style="max-width:62ch;font-weight:600;">
+        Maybe you're the one everyone leans on, quietly running on empty. Maybe your relationships
+        don't fit the shape the world handed you, and you're tired of explaining yourself. Maybe
+        you're getting curious about your sexuality, or what you actually want — not what you were
+        told to want. Maybe something just feels a little off, and you can't quite name it yet.</p>
+      <p style="max-width:62ch;font-weight:600;">
+        Wherever you're landing from: you're welcome here, exactly as you are. Not the polished
+        version. The real one. My whole job is to be in your corner while you come home to yourself —
+        no judgment, no fixing, no pretending. Just a person who genuinely gets it, in a room with
+        good light and probably too many plants.</p>
     </div>
   </section>
 
-  <!-- ── APPROACH ───────────────────────────────────────────── -->
-  <section id="approach" aria-label="My approach">
-    <div class="manifesto">
-      <p class="manifesto-label reveal">My Approach</p>
-      <blockquote class="manifesto-quote reveal reveal-d1">
-        "Therapy works best when it feels like a real conversation — not a performance."
-      </blockquote>
-      <p class="manifesto-body reveal reveal-d2">
-        I draw from relational, psychodynamic, and humanistic frameworks — which is a fancy way of saying: I pay attention to patterns, I care about your history, and I believe you already hold most of the answers. My job is to help you find them.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── FEES ───────────────────────────────────────────────── -->
-  <section id="fees" aria-label="Fees and insurance">
-    <div>
-      <p class="section-label section-label--teal reveal">Investment</p>
-      <h2 class="fees-title reveal reveal-d1">
-        Honest about<br>what it costs.
-      </h2>
-      <p class="fees-body reveal reveal-d2">
-        I'm a private-pay practice — I don't bill insurance directly, but I provide a superbill so you can submit for potential out-of-network reimbursement. A sliding scale is available. Money shouldn't be the reason you don't get support. Let's talk.
-      </p>
-    </div>
-    <div class="fees-items">
-      <div class="fees-item reveal">
-        <span class="fees-item-label">Free Consultation (15 min)</span>
-        <span class="fees-item-value">Free</span>
-      </div>
-      <div class="fees-item reveal reveal-d1">
-        <span class="fees-item-label">Individual Session (50 min)</span>
-        <span class="fees-item-value">Inquire</span>
-      </div>
-      <div class="fees-item reveal reveal-d2">
-        <span class="fees-item-label">Sliding Scale Available</span>
-        <span class="fees-item-value">Yes</span>
-      </div>
-      <div class="fees-item reveal reveal-d3">
-        <span class="fees-item-label">Superbill for Insurance</span>
-        <span class="fees-item-value">Provided</span>
+  <section class="sec" aria-label="Affirming badges" style="padding-top:0;padding-bottom:54px;">
+    <div class="wrap reveal" style="text-align:center;">
+      <p style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lilac);font-weight:800;margin:0 0 .4rem;">A safe place to land</p>
+      <h2 style="font-size:clamp(1.5rem,3vw,2rem);margin:0 0 .5em;">You're welcome here, exactly as you are</h2>
+      <p style="font-size:1.05rem;color:var(--ink-soft);margin:0 auto 1.6em;max-width:46ch;">No part of you is the problem we're here to fix.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:600px;margin:0 auto;">
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--pink-tint);border:2px solid var(--pink);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">🏳️‍🌈 LGBTQ+ Affirming</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--coral-tint);border:2px solid var(--coral);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">🏳️‍⚧️ Trans Affirming</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--teal-tint);border:2px solid var(--teal);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">💞 Poly &amp; ENM Aware</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--marigold-tint);border:2px solid var(--marigold);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">🔗 Kink Aware</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--coral-tint);border:2px solid var(--coral);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">🌼 All Bodies Welcome</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--pink-tint);border:2px solid var(--pink);color:var(--ink);font-weight:700;font-size:.95rem;padding:8px 16px;border-radius:999px;">✨ Sex-Positive</span>
       </div>
     </div>
   </section>
 
-  <!-- ── CONTACT ────────────────────────────────────────────── -->
-  <section id="contact" aria-label="Contact">
-    <div class="contact-inner">
-      <p class="section-label section-label--pink" style="justify-content:center;">Let's Connect</p>
-      <h2 class="contact-title">Ready when<br>you are.</h2>
-      <p class="contact-sub">
-        Fill this out and I'll get back to you within one business day. The first consultation is free — no commitment, just a conversation.
-      </p>
-      <form class="contact-form" onsubmit="handleSubmit(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="First name is fine" autocomplete="given-name" required>
+  <section class="sec sec--tint" id="about" aria-labelledby="about-h">
+    <div class="wrap lead-2">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">I didn't take the straight road to this chair — thank goodness.</h2>
+        <p>Before I was a therapist, I was a sex educator. I spent years talking openly, without
+          flinching, about bodies and desire and shame. What I kept noticing was that so many people
+          believed something was wrong with them, when really they'd just never been in a room that
+          got them. That's why I became a therapist — and it's the feeling I try to recreate every
+          time someone sits down across from me.</p>
+        <p>In the room, I'm warm and pretty laid-back. I'll laugh with you, go deep when it's time,
+          and know when to come up for air. I believe healing is allowed to have color and joy and a
+          little whimsy in it — that your inner child gets a seat at the table, and that rest is a
+          right, not a reward.</p>
+        <p style="font-weight:700;">And, because it matters: I'm a therapist who has a therapist.
+          I'd never ask you to go somewhere I'm not willing to go myself.</p>
+        <h3 style="font-size:1.5rem;margin:1.6em 0 .4em;">I'm not here to tell you you're "so strong."</h3>
+        <p>You've heard it your whole life — <em>you're so resilient, you handle everything so
+          well, I don't know how you do it.</em> And you're tired, because the people saying it
+          have no idea what it costs you to keep doing it.</p>
+        <p>Here's what I actually believe: your people survived things that should have been
+          unsurvivable — and not so you could spend this one life white-knuckling your way through,
+          calling it "fine." You're allowed to want more than fine. That's the whole reason I do
+          this.</p>
+        <h3 style="font-size:1.5rem;margin:1.6em 0 .4em;">Fully credentialed. Completely un-precious about it.</h3>
+        <p>I've got the training and the framed pieces of paper to prove it — and I'm also not the
+          kind of therapist who treats the medical model like scripture. I don't think a diagnosis
+          is the most interesting thing about you, and I don't believe healing only happens in a
+          tidy 50-minute box.</p>
+        <p>There's no single right way to come home to yourself. So we'll find <em>yours</em> —
+          practical and intuitive, structured and a little magic, whatever it takes. Sometimes
+          that's skills and boundaries and nervous-system stuff. Sometimes it's pulling out every
+          tool in the kit. Always, it means you're the expert on you, and I'm just genuinely,
+          unshakably in your corner.</p>
+        <p style="font-size:.95rem;color:var(--ink-soft);">I hold an MA in counseling and am a National Certified Counselor (NCC). I see clients by telehealth across Georgia and in person in Atlanta. A Good Faith Estimate is available on request.</p>
+      </div>
+      <div class="reveal">
+        <div class="polaroid">
+          <div class="ph">[ Your photo here — something bright &amp; you ]</div>
+          <span class="cap">me, probably mid-laugh</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="who" aria-labelledby="who-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Who I work with</p>
+        <h2 id="who-h">Chances are, you're exactly who I'm here for.</h2>
+        <p style="max-width:56ch;">I work with individuals and couples — and yes, relationships with
+          more than two people, too. Most folks find me for one of these reasons, though plenty are a
+          beautiful mix of several.</p>
+      </div>
+      <div class="cards">
+        <div class="card c-coral reveal"><span class="tag">Eldest daughters</span>
+          <h3>The one who holds everyone</h3>
+          <p>You were the responsible one, the fixer, the family's unofficial therapist before you
+            could legally drive. Let's let you be a person with needs — not just a role everyone
+            relies on. Rest included.</p></div>
+        <div class="card c-teal reveal"><span class="tag">Complex relationships</span>
+          <h3>Relationships that don't fit the template</h3>
+          <p>Blended, long-distance, on-again, hard to summarize at Thanksgiving — we'll untangle it
+            without anyone telling you what your relationship is "supposed" to look like.</p></div>
+        <div class="card c-pink reveal"><span class="tag">Sexuality</span>
+          <h3>Curious, shifting, surprising desire</h3>
+          <p>Maybe your relationship with desire has gone quiet, gotten louder, or surprised you.
+            Nothing about it is a problem to solve. We'll get curious together — gently, shame-free.</p></div>
+        <div class="card c-lilac reveal"><span class="tag">LGBTQIA+</span>
+          <h3>Affirming, full stop</h3>
+          <p>Your identity isn't the thing we're here to fix or examine — it's just part of the whole,
+            wonderful person I get to work with. You won't have to educate me to be understood.</p></div>
+        <div class="card c-marigold reveal"><span class="tag">Poly &amp; nonmonogamy</span>
+          <h3>No pathologizing your structure</h3>
+          <p>I won't treat jealousy like proof something's broken. I know the language, I respect the
+            work it takes, and we can focus on the real stuff: communication, agreements, and the very
+            human feelings underneath.</p></div>
+        <div class="card c-green reveal"><span class="tag">Kink community</span>
+          <h3>You're safe here</h3>
+          <p>Your kink is not a symptom, and I won't treat it like a wound that needs explaining.
+            I understand consent, negotiation, and aftercare as the skilled, intimate things they are.</p></div>
+      </div>
+      <p class="endnote reveal">And if none of those fit perfectly? That's okay too. You don't have to
+        come with a category. You just have to come as you are.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--tint" id="working" aria-labelledby="working-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Working together</p>
+        <h2 id="working-h">What it actually looks like.</h2>
+        <p style="max-width:56ch;">The logistics, made human — because you deserve to know what you're
+          walking into before you walk into it.</p>
+      </div>
+      <div class="stack">
+        <div class="panel reveal">
+          <h3>Individual therapy</h3>
+          <p>One-on-one time that's entirely yours. Sometimes practical and skills-focused, sometimes
+            deep and tender, often both. We follow what you actually need — no script.</p>
+          <p class="price">[50 minutes] · usually [weekly] to start</p>
+        </div>
+        <div class="panel reveal">
+          <h3>Couples &amp; relationships</h3>
+          <p>Whether you're two people or a polycule, this is a place to be heard without it turning
+            into a referee match. We'll slow the painful loops and rebuild the kind of communication
+            that makes a relationship feel safe again.</p>
+          <p class="price">[length] · [frequency]</p>
+        </div>
+        <div class="panel full reveal">
+          <h3>The practical stuff</h3>
+          <p>I see clients by telehealth across Georgia and in person in Atlanta. I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is available — I know cost is real, and if it's a barrier, reach out anyway and let's talk. You also have a right to a Good Faith Estimate of what your care will cost, and I'm always happy to talk money plainly. It's part of your care, not a side conversation.</p>
+          <p style="margin-bottom:0;font-weight:700;">We begin with a free 15-minute consult —
+            a low-stakes conversation to feel each other out. No commitment, no pressure. The right
+            fit matters, and I'd genuinely rather help you find the right person than be the wrong one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <p class="eyebrow" style="color:var(--lilac)">Good questions</p>
+        <h2 id="faq-h">The things you're probably already wondering.</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="q"><button aria-expanded="false"><span>How do I know if I even need therapy?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>You don't have to be in crisis to deserve support. If something's been sitting heavy, if you keep circling the same thing, or if you're just curious what it'd be like to have a person in your corner — that's reason enough. Therapy isn't only for emergencies. It's also for becoming more yourself.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>What's a consult, and what happens after?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>It's a free, casual [15–20 minute] call where we talk about what's bringing you in and whether we're a good fit. If it feels right, we'll schedule a first session. If it doesn't, I'll happily point you toward someone who might be a better match. No pressure either way.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>I've never done therapy before. Is that weird?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>Not even a little. Lots of my clients are first-timers, and "I have no idea how this works" is a completely normal place to start. I'll walk you through everything. You don't have to be good at therapy to come to therapy.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>Is this really judgment-free for kink, nonmonogamy, and queer identities?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>Yes — genuinely, not as a buzzword. I won't pathologize your relationship structure, your identity, or your desires, and you won't have to teach me the basics to be understood. It's one of the main reasons people come to me, and I take it seriously.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>Do you work with more than two people in a relationship?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>I do. Relationships come in lots of shapes here, and all of them are welcome.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>Do you take insurance?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>I'm private-pay and can provide a superbill for possible out-of-network reimbursement. A sliding scale is also available. If cost is a worry, please reach out anyway — I'd rather problem-solve with you than have money quietly keep you away.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>How long will I be in therapy?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>There's no set answer, and anyone who promises one is guessing. Some people come for a specific season; others stay longer because they like the space. We'll check in regularly about what's working — you're always in the driver's seat.</p></div></div>
+        <div class="q"><button aria-expanded="false"><span>Where are you located?</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="a"><p>I see clients by telehealth across Georgia and in person in Atlanta.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Values" style="background:var(--paper);">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center;margin-bottom:30px;">
+        <p style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lilac);font-weight:800;margin:0 0 .4rem;">What you can count on in here</p>
+        <h2 style="margin:0;">These aren't just words on a wall</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+        <div class="reveal" style="background:var(--pink-tint);border-radius:18px;padding:24px;border-left:6px solid var(--pink);">
+          <h3>Affirming, not just tolerant</h3>
+          <p style="font-size:1rem;margin:0;">Your identity, orientation, relationship structure, and desires are welcome as the healthy parts of you they are. You'll never have to educate me to be understood.</p>
+        </div>
+        <div class="reveal" style="background:var(--teal-tint);border-radius:18px;padding:24px;border-left:6px solid var(--teal);">
+          <h3>No pathologizing</h3>
+          <p style="font-size:1rem;margin:0;">I don't believe the way you love, want, or move through the world is a symptom. You adapted brilliantly to what life handed you — and what was learned can be gently unlearned.</p>
+        </div>
+        <div class="reveal" style="background:var(--marigold-tint);border-radius:18px;padding:24px;border-left:6px solid var(--marigold);">
+          <h3>Joy belongs in healing</h3>
+          <p style="font-size:1rem;margin:0;">We'll do the hard work and make room for rest, play, and color. Your inner child gets a seat at the table, and the parts of you that got called "too much" are welcome here.</p>
+        </div>
+        <div class="reveal" style="background:var(--coral-tint);border-radius:18px;padding:24px;border-left:6px solid var(--coral);">
+          <h3>You're the expert on you</h3>
+          <p style="font-size:1rem;margin:0;">I won't hand you verdicts or tell you how to live. My job is to help you hear what you already know, and to be genuinely in your corner while you figure out what fits.</p>
+        </div>
+        <div class="reveal" style="background:var(--lilac-tint);border-radius:18px;padding:24px;border-left:6px solid var(--lilac);">
+          <h3>Access and care</h3>
+          <p style="font-size:1rem;margin:0;">Therapy is a privilege not everyone can easily reach. If cost is a barrier, reach out anyway — let's talk options rather than have money quietly keep you away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact reveal">
+        <span class="blob b1" style="width:220px;height:220px;background:var(--coral);top:-50px;left:-30px" aria-hidden="true"></span>
+        <span class="blob b2" style="width:180px;height:180px;background:var(--teal);bottom:-40px;right:-20px" aria-hidden="true"></span>
+        <p class="eyebrow" style="color:var(--marigold)">Let's start with hello</p>
+        <h2 id="contact-h">Some part of you is curious. That's a good reason.</h2>
+        <p>The first step is small, I promise: a free, no-pressure consult where we just talk. You don't
+          have to have the right words ready. You can literally start with "I'm not sure where to
+          begin," and we'll go from there together.</p>
+        <p style="font-weight:700;color:var(--cream)">You can reach me at molly@mollyschwartztherapy.com or book
+          straight from the button below. I read every message and reply within 2 business days.</p>
+        <form class="cform" id="consultForm" action="https://formspree.io/f/[your-form-id]" method="POST">
+          <div class="field"><label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required /></div>
+          <div class="field"><label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="cf-msg">What's bringing you in? (a sentence is plenty — no pressure)</label>
+            <textarea id="cf-msg" name="message" rows="4"></textarea></div>
+          <input type="hidden" name="_subject" value="New consult request from your website" />
+          <div class="cform-actions">
+            <button class="btn" type="submit">Send it my way</button>
+            <a class="btn btn--book" href="https://healatl.clientsecure.me/" target="_blank" rel="noopener">Or book a time directly</a>
           </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="interest">What brings you here? (optional)</label>
-          <select id="interest" name="interest">
-            <option value="" disabled selected>Select a topic</option>
-            <option value="relationships">Relationship &amp; Intimacy</option>
-            <option value="identity">Sexuality &amp; Identity</option>
-            <option value="self-esteem">Self-Esteem / Self-Worth</option>
-            <option value="anxiety">Anxiety</option>
-            <option value="lgbtqia">LGBTQIA+ Issues</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Anything else you'd like to share? (optional)</label>
-          <textarea id="message" name="message" placeholder="No pressure — even a sentence is enough."></textarea>
-        </div>
-        <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
-      </form>
-      <div class="contact-details">
-        <span>Atlanta, Georgia</span>
-        <span>molly@mollyschwartztherapy.com</span>
-        <span>Telehealth available throughout GA</span>
+          <p class="cform-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </form>
+        <p class="crisis">If you're in crisis or it's an emergency, please don't wait on a form — call
+          or text <a href="tel:988">988</a> (the Suicide &amp; Crisis Lifeline) or go to your nearest
+          emergency room. I'm not able to provide emergency services, but those folks are there for you
+          right now.</p>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer>
-    <span>© 2026 Molly Schwartz Therapy</span>
-    <span>Molly Schwartz, MA, NCC, LPC — Atlanta, GA</span>
-  </footer>
+</main>
 
-  <script>
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => revealObserver.observe(el));
+<footer>
+  <div class="brand" style="display:inline-flex;flex-direction:column;align-items:center;gap:8px"><img src="images/reflecting-therapy-logo-with-name.png" alt="Reflecting Therapy — open door with disco ball logo" style="height:110px;width:auto"><span style="font-size:1rem">Molly&nbsp;Schwartz, MA, NCC</span></div>
+  <p>Affirming individual &amp; couples therapy · Atlanta, GA &amp; telehealth across Georgia<br/>
+  molly@mollyschwartztherapy.com · A Good Faith Estimate is available on request.</p>
+  <p style="font-size:.82rem;opacity:.7">© <span id="yr"></span> Molly Schwartz, MA, NCC · Reflecting Therapy. This site is for information and connection — it isn't therapy or a substitute for care.</p>
+</footer>
 
-    // Contact form (placeholder handler)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      btn.textContent = 'Message sent ✦';
-      btn.disabled = true;
-    }
-  </script>
-
+<script>
+  document.documentElement.classList.add('js');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.body.classList.add('anim');
+  }
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>10)});
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  t.addEventListener('click',function(){
+    var open=l.classList.toggle('open');
+    t.setAttribute('aria-expanded',open);
+    t.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+    l.classList.remove('open');t.setAttribute('aria-expanded',false);
+  })});
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.getAttribute('aria-expanded')==='true';
+      var a=b.nextElementSibling;
+      b.setAttribute('aria-expanded',!open);
+      a.style.maxHeight=open?null:a.scrollHeight+'px';
+    });
+  });
+  if(document.body.classList.contains('anim')){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }
+  var cf=document.getElementById('consultForm');
+  if(cf){cf.addEventListener('submit',function(e){
+    var action=cf.getAttribute('action');
+    if(action.indexOf('[')>-1){return;}
+    e.preventDefault();
+    var s=document.getElementById('cfStatus');
+    s.textContent='sending…';
+    fetch(action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}})
+      .then(function(r){if(r.ok){cf.reset();s.textContent="got it — thank you. I'll be in touch within a couple business days.";}
+        else{s.textContent="hmm, that didn't go through. email me at molly@mollyschwartztherapy.com and I'll get right back to you.";}})
+      .catch(function(){s.textContent="hmm, that didn't go through. email me at molly@mollyschwartztherapy.com and I'll get right back to you.";});
+  });}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
